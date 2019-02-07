@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    Testing
     <meta charset="utf-8">
     <title>Winter Break Boyz</title>
     <link rel="stylesheet" href="master.css">
@@ -12,24 +11,15 @@
 
     <div class="userInput">
       <form class="inputForGame" autocomplete="on">
-        Number of rows:
-          <input type="number" name="gameRow" placeholder="2" min="2">
-          <br>
-        Number of columns:
-          <input type="number" name="gameColumn" placeholder="2" min="2">
-
+        <p id="inputP">
+          <label class="inputLabel" for="gameRow">Number of rows:</label>
+          <input class="inputLabel" type="number" name="gameRow" placeholder="2" min="2">
+        </p>
+        <p id="inputP">
+          <label class="inputLabel" for="gameColumn">Number of columns:</label>
+          <input class="inputLabel" type="number" name="gameColumn" placeholder="2" min="2">
+        </p>
       </form>
     </div>
-
-    <div class="mainGame">
-
-    </div>
   </body>
-  <script>
-        //Function called when the page loads to create and initial board.
-        function OnLoad()
-        {
-            
-        }
-  </script>
 </html>
