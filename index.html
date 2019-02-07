@@ -5,18 +5,22 @@
     <meta charset="utf-8">
     <title>Winter Break Boyz</title>
     <link rel="stylesheet" href="master.css">
+    <script src="TopLevel.js"></script>
   </head>
-  <body>
+  <body onload="OnLoad()">
     <h1>This is the header for the page of EECS 448's own Winter Break Boyz.</h1>
     <h3>This page is made to host the minesweeper game.</h3>
 
     <div class="userInput">
       <form class="inputForGame" autocomplete="on">
         Number of rows:
-          <input type="number" name="gameRow" placeholder="2" min="2">
+          <input type="number" id="gameRow" placeholder="10" min="2">
           <br>
         Number of columns:
-          <input type="number" name="gameColumn" placeholder="2" min="2">
+          <input type="number" id="gameColumn" placeholder="10" min="2">
+          <br>
+        Number of Bombs:
+          <input type="number" id="gameBomb" placeholder="10" min="1" max="MaxBombs">
 
       </form>
     </div>
@@ -29,7 +33,15 @@
         //Function called when the page loads to create and initial board.
         function OnLoad()
         {
-            
+            //Limit the maximum number of bomb input.
+            let MaxBombs = document.getElementById("gameBomb");
+            MaxBombs.setAttribute("max", (NumRows * NumCols) - 1);
+
+            let NumRows = document.getElementById("gameRow").placeholder;
+            let NumCols = document.getElementById("gameColumn").placeholder;
+            let NumBombs = document.getElementById("gameBomb").placeholder;
+
+            //CreateBoard(NumRows, NumCols, NumBombs);
         }
   </script>
 </html>
