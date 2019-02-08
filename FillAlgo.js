@@ -47,7 +47,7 @@ function return_2DBoard(row,col,bombNum)
                 user2DArray[row+1][col-1] !=='b' && user2DArray[row-1][col] !== 'b' && user2DArray[row-1][col+1] !== 'b'
                  && user2DArray[row][col+1] !== 'b' && user2DArray[row+1][col+1] !== 'b')
             {
-                user2DArray[row][col] = 0; 
+                user2DArray[row][col] = 0;
             }
         }
     }
