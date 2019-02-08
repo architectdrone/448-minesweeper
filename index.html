@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Winter Break Boyz</title>
     <link rel="stylesheet" href="master.css">
-    <script src="TopLevel.js"></script>
   </head>
   <body onload="OnLoad()">
     <h1>This is the header for the page of EECS 448's own Winter Break Boyz.</h1>
@@ -13,17 +12,19 @@
     <div class="userInput">
       <form class="inputForGame" autocomplete="on">
         <p id="inputP">
-          <label class="inputLabel" id="gameRow">Number of rows:</label>
-          <input class="inputLabel" type="number" name="gameRow" placeholder="2" min="2">
+          <label class="inputLabel">Number of rows:</label>
+          <input class="inputLabel" type="number" id="gameRow" placeholder="10" min="2">
         </p>
         <p id="inputP">
-          <label class="inputLabel" id="gameColumn">Number of columns:</label>
-          <input class="inputLabel" type="number" name="gameColumn" placeholder="2" min="2">
+          <label class="inputLabel">Number of columns:</label>
+          <input class="inputLabel" type="number" id="gameColumn" placeholder="10" min="2">
         </p>
         <p id="inputP">
-          <label class="inputLabel" id="gameBomb">Number of bombs:</label>
-          <input class="inputLabel" type="number" name="gameBomb" placeholder="2" min="2">
+          <label class="inputLabel">Number of bombs:</label>
+          <input class="inputLabel" type="number" id="gameBomb" placeholder="10" min="2">
         </p>
+        <p>
+          <input class="inputLabel" type="button" id="CreateButton" value="Create Board">
       </form>
     </div>
   </body>
@@ -40,7 +41,9 @@
 
             let NumBombs = document.getElementById("gameBomb").placeholder;
 
+            //Uncomment the next line to create an initial board on page load.
             //CreateBoard(NumRows, NumCols, NumBombs);
         }
   </script>
+  <script src="TopLevel.js"></script>
 </html>
