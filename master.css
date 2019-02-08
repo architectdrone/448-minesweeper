@@ -4,12 +4,17 @@ body
   font-family: "Comic Sans MS";
 }
 
-.userInput
+.inputForGame
 {
-
+  display:table
 }
 
-.containerInput
+#inputP
 {
+  display: table-row;
+}
 
+.inputLabel
+{
+  display: table-cell;
 }
