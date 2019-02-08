@@ -33,12 +33,13 @@
         //Function called when the page loads to create and initial board.
         function OnLoad()
         {
+            let NumRows = document.getElementById("gameRow").placeholder;
+            let NumCols = document.getElementById("gameColumn").placeholder;
+
             //Limit the maximum number of bomb input.
             let MaxBombs = document.getElementById("gameBomb");
             MaxBombs.setAttribute("max", (NumRows * NumCols) - 1);
 
-            let NumRows = document.getElementById("gameRow").placeholder;
-            let NumCols = document.getElementById("gameColumn").placeholder;
             let NumBombs = document.getElementById("gameBomb").placeholder;
 
             //CreateBoard(NumRows, NumCols, NumBombs);
