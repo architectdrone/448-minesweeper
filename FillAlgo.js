@@ -11,7 +11,14 @@ function return_2DBoard(row,col,bombNum)
 {
     let bombPlacement1;
     let bombPlacement2;
-    let key2DArray = [[row], [col]];
+
+    let key2DArray = new Array(row);      //define outer array
+    for (let i = 0; i < key2DArray.length; i++){
+        key2DArray[i] = new Array(col);  //set index 'i' of outer array to be a new array of size 'col'
+        for (let j = 0; j < key2DArray[i].length; j++){
+            key2DArray[i][j] = j               //for every index 'i' in outer array, set every index of the array it holds at array2d[i] equal to the current 'j' value
+        }
+    }
     for (let i = 0; i < bombNum; i += 1)
     {
         bombPlacement1 = (Math.floor(Math.random() * row));
@@ -29,6 +36,13 @@ function return_2DBoard(row,col,bombNum)
         }
     }
 
+    for (let k =0; k<row; k+=1)
+    {
+        for (let j =0; j<col; j+=1)
+        {
+            console.log(key2DArray[k][j]);
+        }
+    }
     let user2DArray = [[row], [col]];
     for (let i =0; i< row; i+=1)
     {
@@ -38,18 +52,15 @@ function return_2DBoard(row,col,bombNum)
         }
     }
 
-    for (let j =0; j<row; j+=1)
-    {
-        for (let k =0; ik<col; k+=1)
-        {
-            if(user2DArray[row-1][col] !== 'b' && user2DArray[row+1][col] !== 'b'
-                && user2DArray[row-1][col-1] !== 'b' && user2DArray[row][col-1] !== 'b' &&
-                user2DArray[row+1][col-1] !=='b' && user2DArray[row-1][col] !== 'b' && user2DArray[row-1][col+1] !== 'b'
-                 && user2DArray[row][col+1] !== 'b' && user2DArray[row+1][col+1] !== 'b')
-            {
-                user2DArray[row][col] = 0;
-            }
-        }
-    }
+
 
 }
+
+function main()
+{
+    let row =4;
+    let col =5;
+    let bomb = 4;
+    return_2DBoard(4,5,4);
+}
+
