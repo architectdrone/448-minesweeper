@@ -28,7 +28,7 @@ function get_elem_img(value){
     return key.key_list[value.toString()]
 }
 
-function build_html_grid(grid){
+function build_html_table(grid){
     let html_table = document.createElement("table");
 
     for (let i = 0; i < grid.length; i++) {
@@ -46,7 +46,7 @@ function build_html_grid(grid){
     return html_table;
 }
 
-function style_grid(html_table) {
+function style_table(html_table) {
     //style <table>
     html_table.style.tableLayout = "fixed";
     html_table.style.borderCollapse = "collapse";
@@ -78,5 +78,5 @@ let test_grid = [
     [ 4,  5,  6],
     [7 ,  8,  9]
 ];
-let html_table = style_grid(build_html_grid(test_grid));
+let html_table = style_table(build_html_table(test_grid));
 window.onload = () => place_grid(html_table);
