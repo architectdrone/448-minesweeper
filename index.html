@@ -2,33 +2,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Winter Break Boyz</title>
+    <title>Meet the Forkers</title>
     <link rel="stylesheet" href="master.css">
+    <script src="TopLevel.js"></script>
   </head>
   <body onload="OnLoad()">
-    <h1>This is the header for the page of EECS 448's own Winter Break Boyz.</h1>
+    <h1>This is the header for the page of EECS 448's own Forkers.</h1>
     <h3>This page is made to host the minesweeper game.</h3>
 
     <div class="userInput">
       <form class="inputForGame" autocomplete="on">
         <p id="inputP">
-          <label class="inputLabel">Number of rows:</label>
-          <input class="inputLabel" type="number" id="gameRow" placeholder="10" min="2">
+          <label class="inputLabel" id="gameRow">Number of rows:</label>
+          <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2">
         </p>
         <p id="inputP">
-          <label class="inputLabel">Number of columns:</label>
-          <input class="inputLabel" type="number" id="gameColumn" placeholder="10" min="2">
+          <label class="inputLabel" id="gameColumn">Number of columns:</label>
+          <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2">
         </p>
         <p id="inputP">
-          <label class="inputLabel">Number of bombs:</label>
-          <input class="inputLabel" type="number" id="gameBomb" placeholder="10" min="2">
+          <label class="inputLabel" id="gameBomb">Number of bombs:</label>
+          <input class="inputLabel" id="uB" type="number" name="gameBomb" placeholder="2" min="1" max="limitBombs()">
         </p>
-        <p>
-          <input class="inputLabel" type="button" id="CreateButton" value="Create Board">
+          <button name="userSubmitBoard" onclick="userGB()">Create Minesweeper Game</button>
       </form>
     </div>
   </body>
   <script>
+        //not sure if we will need this anymore -Miller
         //Function called when the page loads to create and initial board.
         function OnLoad()
         {
@@ -41,9 +42,36 @@
 
             let NumBombs = document.getElementById("gameBomb").placeholder;
 
-            //Uncomment the next line to create an initial board on page load.
             //CreateBoard(NumRows, NumCols, NumBombs);
         }
+
+        //saving user data input from the form (rows, cols, # bombs)
+        function userGB() //works
+        {
+          var rows = document.getElementById("uGR").value;
+          var cols = document.getElementById("uGC").value;
+          var bombs = document.getElementById("uB").value;
+
+          //waiting for handoff to Teddy's 2D algo. Just need to send values to
+          //his function. Then, from Teddy's function to Adam's GBF to display on
+          //index.html
+
+        }
+
+        //THIS IS NOT WORKING!!!!!
+        //function for adjusting max bombs: ((rows*cols)-1)
+          //need to return the max number of bombs based on the columns and rows
+          function limitBombs()
+          {
+            var rows = document.getElementById("uGR").value;
+            var cols = document.getElementById("uGC").value;
+            var bombs = document.getElementById("uB").value;
+            prompt("Testing");
+            return((rows*cols)-1);
+          }
+
+
+
+
   </script>
-  <script src="TopLevel.js"></script>
 </html>
