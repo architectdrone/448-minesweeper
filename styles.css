@@ -1,2 +1,21 @@
 #hold_grid {
+  margin-left: 48%;
+  margin-top: 200px;
+}
+
+.the-adam-zone
+{
+  margin-left:33%;
+}
+
+#images
+{
+}
+
+#text
+{
+  font-size: 24px;
+  font-variant: small-caps;
+  position:relative;
+  bottom: 1.2em;
 }
