@@ -10,7 +10,6 @@ function build_grid(row, col) {
 }
 
 function place_grid(html_grid) {
-
     let div = document.getElementById('hold_grid');
     div.appendChild(html_grid);
 }
@@ -33,4 +32,4 @@ function build_html_grid(grid){
 }
 
 let grid = build_grid(2, 2);
-place_grid(build_html_grid(grid));
+window.onload = () => place_grid(build_html_grid(grid));
