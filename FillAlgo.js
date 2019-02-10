@@ -6,6 +6,14 @@ function return_x(x){
 let y = 10
 console.log(return_x(y))
 */
+
+
+    let row =8;
+    let col =5;
+    let bomb = 5;
+    console.log(return_2DBoard(8,5,5)) ;
+
+
 function Array2DCreator(col, row) {
     let array2D = new Array(row);      //define outer array
     for (let i = 0; i < array2D.length; i++)
@@ -23,11 +31,15 @@ function return_2DBoard(row,col,bombNum)
 
     let key2DArray = Array2DCreator(col,row);      //define outer array
 
-    for (let i = 0; i < bombNum; i ++)
+    for (let i = 0; i <bombNum; i ++)
     {
         bombPlacement1 = (Math.floor(Math.random() * row));
         bombPlacement2 = (Math.floor(Math.random() * col));
-        key2DArray[bombPlacement1][bombPlacement2] = 'b';
+        if(key2DArray[bombPlacement1][bombPlacement2] != 'b')
+        {
+            key2DArray[bombPlacement1][bombPlacement2] = 'b';
+        }
+
     }
     for (let k =0; k<row; k++)
     {
@@ -48,13 +60,5 @@ function return_2DBoard(row,col,bombNum)
 
 }
 
-function main()
-{
-    console.log("HELLO")
-    let row =4;
-    let col =5;
-    let bomb = 4;
-   console.log(return_2DBoard(4,5,4)) ;
 
-}
 
