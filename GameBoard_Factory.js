@@ -26,6 +26,7 @@ function build_html_grid(grid){
             let data = document.createElement('td');
             let text = j.toString();
             data.appendChild(document.createTextNode(text));
+            data.style.border = '1px solid black';
             html_table.childNodes[i].appendChild(data);
         }
     }
@@ -33,4 +34,4 @@ function build_html_grid(grid){
 }
 
 let grid = build_grid(2, 2);
-place_grid(build_html_grid(grid));
+document.onload = place_grid(build_html_grid(grid));
