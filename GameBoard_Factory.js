@@ -9,4 +9,28 @@ function build_grid(row, col) {
     return array2D;
 }
 
-console.log(build_grid(2, 2));
+function place_grid(html_grid) {
+
+    let div = document.getElementById('hold_grid');
+    div.appendChild(html_grid);
+}
+
+function build_html_grid(grid){
+    let html_table = document.createElement("table");
+
+    for(let i = 0; i < grid.length; i++){
+        let row = document.createElement('tr');
+        html_table.appendChild(row);
+
+        for(let j = 0; j < grid[i].length; j++){
+            let data = document.createElement('td');
+            let text = j.toString();
+            data.appendChild(document.createTextNode(text));
+            html_table.childNodes[i].appendChild(data);
+        }
+    }
+    return html_table
+}
+
+let grid = build_grid(2, 2);
+place_grid(build_html_grid(grid));
