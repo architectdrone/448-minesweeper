@@ -25,9 +25,9 @@ function return_2DBoard(row,col,bombNum)
         bombPlacement2 = (Math.floor(Math.random() * col));
         key2DArray[bombPlacement1][bombPlacement2] = 'b';
     }
-    for (let k =0; k<row; k+=1)
+    for (let k =0; k<key2DArray.length; k++)
     {
-        for (let j =0; j<col; j+=1)
+        for (let j =0; j<key2DArray.length; j++)
         {
             if(key2DArray[k][j] !== 'b')
             {
@@ -35,22 +35,16 @@ function return_2DBoard(row,col,bombNum)
             }
         }
     }
+    console.log(key2DArray);
 
-    for (let k =0; k<row; k+=1)
-    {
-        for (let j =0; j<col; j+=1)
-        {
-            console.log(key2DArray[k][j]);
-        }
-    }
-    let user2DArray = [[row], [col]];
-    for (let i =0; i< row; i+=1)
-    {
-        for (let k =0; k<col; k+=1)
-        {
-            user2DArray[i][k] = key2DArray[i][k];
-        }
-    }
+    // let user2DArray = [[row], [col]];
+    // for (let i =0; i< row; i+=1)
+    // {
+    //     for (let k =0; k<col; k+=1)
+    //     {
+    //         user2DArray[i][k] = key2DArray[i][k];
+    //     }
+    // }
 
 
 
