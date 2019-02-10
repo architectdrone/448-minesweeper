@@ -78,5 +78,5 @@ let test_grid = [
     [ 4,  5,  6],
     [7 ,  8,  9]
 ];
-let html_grid = style_grid(build_html_grid(test_grid));
-window.onload = () => place_grid(html_grid);
+let html_table = style_grid(build_html_grid(test_grid));
+window.onload = () => place_grid(html_table);
