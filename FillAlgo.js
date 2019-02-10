@@ -6,16 +6,11 @@ function return_x(x){
 let y = 10
 console.log(return_x(y))
 */
-function Array2DCreator(col, row)
-{
+function Array2DCreator(col, row) {
     let array2D = new Array(row);      //define outer array
     for (let i = 0; i < array2D.length; i++)
     {
-        array2D[i] = new Array(col);  //set index 'i' of outer array to be a new array of size 'col'
-        for (let j = 0; j < array2D[i].length; j++)
-        {
-            array2D[i][j] = j               //for every index 'i' in outer array, set every index of the array it holds at array2d[i] equal to the current 'j' value
-        }
+        array2D[i] = new Array(col);
     }
 
     return(array2D);
@@ -26,7 +21,7 @@ function return_2DBoard(row,col,bombNum)
     let bombPlacement1;
     let bombPlacement2;
 
-    let key2DArray = new Array(col, row);      //define outer array
+    let key2DArray = Array2DCreator(col,row);      //define outer array
 
     for (let i = 0; i < bombNum; i ++)
     {
@@ -34,9 +29,9 @@ function return_2DBoard(row,col,bombNum)
         bombPlacement2 = (Math.floor(Math.random() * col));
         key2DArray[bombPlacement1][bombPlacement2] = 'b';
     }
-    for (let k =0; k<key2DArray.length; k++)
+    for (let k =0; k<row; k++)
     {
-        for (let j =0; j<key2DArray.length; j++)
+        for (let j =0; j<col; j++)
         {
             if(key2DArray[k][j] !== 'b')
             {
@@ -47,7 +42,7 @@ function return_2DBoard(row,col,bombNum)
 
 
     return(key2DArray);
-   
+
 
 
 
