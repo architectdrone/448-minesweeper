@@ -1,19 +1,10 @@
+
+
 /*
-function return_x(x){
-    return x
-}
+Function Allows for the creation of a
+two dimensional array
 
-let y = 10
-console.log(return_x(y))
-*/
-
-
-    let row =8;
-    let col =5;
-    let bomb = 5;
-    console.log(return_2DBoard(8,5,5)) ;
-
-
+ */
 function Array2DCreator(col, row) {
     let array2D = new Array(row);      //define outer array
     for (let i = 0; i < array2D.length; i++)
@@ -23,6 +14,12 @@ function Array2DCreator(col, row) {
 
     return(array2D);
 }
+/*
+Function simply takes the row and col parameter and calls
+array creator function to intialize a 2d array. After doing so,
+bomb placement will be randomized and empty/marked spots will be visible within
+user array.
+ */
 function return_2DBoard(row,col,bombNum)
 {
 
