@@ -1,7 +1,18 @@
 class Key {
     constructor() {
-        this.bomb = create_image_element('img/pAK004-boom.png');
-        this.concealed = create_image_element('img/square.png');
+        this.key_list = {
+            '-1': create_image_element('img/square.png'),
+            '0' : create_image_element('img/empty.png'),
+            '1' : create_image_element('img/number-1.png'),
+            '2' : create_image_element('img/number-2.png'),
+            '3' : create_image_element('img/number-3.png'),
+            '4' : create_image_element('img/number-4.png'),
+            '5' : create_image_element('img/number-5.png'),
+            '6' : create_image_element('img/number-6.png'),
+            '7' : create_image_element('img/number-7.png'),
+            '8' : create_image_element('img/number-8.png'),
+            '9' : create_image_element('img/flag.png')
+        }
     }
 }
 
@@ -10,6 +21,11 @@ function create_image_element(path){
     elem_img.setAttribute('src', path);
 
     return elem_img;
+}
+
+function get_elem_img(value){
+    let key = new Key();
+    return key.key_list[value.toString()]
 }
 
 function build_grid(row, col) {
@@ -36,9 +52,8 @@ function build_html_grid(grid){
         html_table.appendChild(row);
 
         for (let j = 0; j < grid[i].length; j++) {
-            let key_list = new Key();
             let data = document.createElement('td');
-            let img = key_list.bomb;
+            let img = get_elem_img(grid[i][j]);
 
             data.appendChild(img);
             row.appendChild(data);
@@ -69,5 +84,11 @@ function style_grid(html_table) {
 
 
 let grid = build_grid(5, 5);
-let html_grid = style_grid(build_html_grid(grid));
+let test_grid = [
+    [-1, -1, -1],
+    [-1,  0,  1],
+    [ 3,  4,  8],
+    [9 ,  0,  1]
+];
+let html_grid = style_grid(build_html_grid(test_grid));
 window.onload = () => place_grid(html_grid);
