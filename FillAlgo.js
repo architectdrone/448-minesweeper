@@ -8,13 +8,17 @@ console.log(return_x(y))
 */
 function Array2DCreator(col, row)
 {
-    let arr = new Array(col);
-    for (let i =0; i<arr.length; i++)
+    let array2D = new Array(row);      //define outer array
+    for (let i = 0; i < array2D.length; i++)
     {
-        arr[i] = new Array(row);
+        array2D[i] = new Array(col);  //set index 'i' of outer array to be a new array of size 'col'
+        for (let j = 0; j < array2D[i].length; j++)
+        {
+            array2D[i][j] = j               //for every index 'i' in outer array, set every index of the array it holds at array2d[i] equal to the current 'j' value
+        }
     }
-    return(arr);
 
+    return(array2D);
 }
 function return_2DBoard(row,col,bombNum)
 {
@@ -43,14 +47,7 @@ function return_2DBoard(row,col,bombNum)
 
 
     return(key2DArray);
-    // let user2DArray = [[row], [col]];
-    // for (let i =0; i< row; i+=1)
-    // {
-    //     for (let k =0; k<col; k+=1)
-    //     {
-    //         user2DArray[i][k] = key2DArray[i][k];
-    //     }
-    // }
+   
 
 
 
