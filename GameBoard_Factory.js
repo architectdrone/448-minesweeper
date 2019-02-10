@@ -45,11 +45,7 @@ function style_grid(html_table) {
     return html_table;
 }
 
-<<<<<<< HEAD
-let grid = build_grid(2, 2);
-document.onload = place_grid(build_html_grid(grid));
-=======
+
 let grid = build_grid(5, 5);
 let html_grid = style_grid(build_html_grid(grid));
 window.onload = () => place_grid(html_grid);
->>>>>>> 89c5408b72f2e2486bc038b8dc6fad348f167ea1
