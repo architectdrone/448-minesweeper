@@ -9,27 +9,41 @@ function build_grid(row, col) {
     return array2D;
 }
 
-function place_grid(html_grid) {
+function place_grid(html_table) {
     let div = document.getElementById('hold_grid');
-    div.appendChild(html_grid);
+    div.appendChild(html_table);
 }
 
 function build_html_grid(grid){
     let html_table = document.createElement("table");
 
-    for(let i = 0; i < grid.length; i++){
+    for(let i = 0; i < grid.length; i++) {
         let row = document.createElement('tr');
         html_table.appendChild(row);
 
-        for(let j = 0; j < grid[i].length; j++){
+        for(let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
             let text = j.toString();
+
             data.appendChild(document.createTextNode(text));
             html_table.childNodes[i].appendChild(data);
         }
     }
-    return html_table
+    return html_table;
 }
 
-let grid = build_grid(2, 2);
-window.onload = () => place_grid(build_html_grid(grid));
+function style_grid(html_table) {
+    html_table.style.borderCollapse = "collapse";
+
+    for(let i = 0; i < html_table.childNodes.length; i++) {
+        let row = html_table.childNodes[i];
+        for(let j = 0; j < row.childNodes.length; j++) {
+            row.childNodes[j].style.border = "1px solid black";
+        }
+    }
+    return html_table;
+}
+
+let grid = build_grid(5, 5);
+let html_grid = style_grid(build_html_grid(grid));
+window.onload = () => place_grid(html_grid);
