@@ -28,22 +28,6 @@ function get_elem_img(value){
     return key.key_list[value.toString()]
 }
 
-function build_grid(row, col) {
-    let array2D = new Array(row);
-    for (let i = 0; i < array2D.length; i++) {
-        array2D[i] = new Array(col);
-        for (let j = 0; j < array2D[i].length; j++) {
-            array2D[i][j] = -1;
-        }
-    }
-    return array2D;
-}
-
-function place_grid(html_table) {
-    let div = document.getElementById('hold_grid');
-    div.appendChild(html_table);
-}
-
 function build_html_grid(grid){
     let html_table = document.createElement("table");
 
@@ -82,8 +66,12 @@ function style_grid(html_table) {
     return html_table;
 }
 
+function place_grid(html_table) {
+    let div = document.getElementById('hold_grid');
+    div.appendChild(html_table);
+}
 
-let grid = build_grid(5, 5);
+
 let test_grid = [
     [-1, -1, -1],
     [-1,  0,  1],
