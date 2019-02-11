@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>Meet the Forkers</title>
     <link rel="stylesheet" href="master.css">
-    <script src="TopLevel.js"></script>
   </head>
-  <body onload="OnLoad()">
+  <body onload="InputCheck()">
     <h1>This is the header for the page of EECS 448's own Forkers.</h1>
     <h3>This page is made to host the minesweeper game.</h3>
 
@@ -24,54 +23,9 @@
           <label class="inputLabel" id="gameBomb">Number of bombs:</label>
           <input class="inputLabel" id="uB" type="number" name="gameBomb" placeholder="2" min="1" max="limitBombs()">
         </p>
-          <button name="userSubmitBoard" onclick="userGB()">Create Minesweeper Game</button>
+          <button name="userSubmitBoard" id="CreateButton" onclick="InputCheck()">Create Minesweeper Game</button>
       </form>
     </div>
   </body>
-  <script>
-        //not sure if we will need this anymore -Miller
-        //Function called when the page loads to create and initial board.
-        function OnLoad()
-        {
-            let NumRows = document.getElementById("gameRow").placeholder;
-            let NumCols = document.getElementById("gameColumn").placeholder;
-
-            //Limit the maximum number of bomb input.
-            let MaxBombs = document.getElementById("gameBomb");
-            MaxBombs.setAttribute("max", (NumRows * NumCols) - 1);
-
-            let NumBombs = document.getElementById("gameBomb").placeholder;
-
-            //CreateBoard(NumRows, NumCols, NumBombs);
-        }
-
-        //saving user data input from the form (rows, cols, # bombs)
-        function userGB() //works
-        {
-          var rows = document.getElementById("uGR").value;
-          var cols = document.getElementById("uGC").value;
-          var bombs = document.getElementById("uB").value;
-
-          //waiting for handoff to Teddy's 2D algo. Just need to send values to
-          //his function. Then, from Teddy's function to Adam's GBF to display on
-          //index.html
-
-        }
-
-        //THIS IS NOT WORKING!!!!!
-        //function for adjusting max bombs: ((rows*cols)-1)
-          //need to return the max number of bombs based on the columns and rows
-          function limitBombs()
-          {
-            var rows = document.getElementById("uGR").value;
-            var cols = document.getElementById("uGC").value;
-            var bombs = document.getElementById("uB").value;
-            prompt("Testing");
-            return((rows*cols)-1);
-          }
-
-
-
-
-  </script>
+  <script src="TopLevel.js"></script>
 </html>
