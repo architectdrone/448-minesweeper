@@ -38,14 +38,31 @@ function build_html_table(grid){
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
             let img = get_elem_img(grid[i][j]);
+            let on_click = dummy;
+            let on_right_click = right_dummy;
 
             data.appendChild(img);
+
+            data.addEventListener('click',  function (){
+                on_click(i, j);
+            });
+            data.addEventListener('contextmenu',  function (){
+                on_right_click(i, j);
+            });
+
             row.appendChild(data);
         }
     }
     return html_table;
 }
 
+function dummy(i, j){
+    console.log(i.toString(), j.toString());
+}
+
+function right_dummy(i, j){
+    console.log("Right", i.toString(), j.toString())
+}
 function style_table(html_table) {
     //style <table>
     html_table.style.tableLayout = "fixed";
