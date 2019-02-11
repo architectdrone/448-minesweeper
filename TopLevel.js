@@ -1,13 +1,9 @@
-//Listens for click of "Create Board" button and checks for valid input.
-let CreateBoardButton = document.getElementById("CreateButton");
-CreateBoardButton.addEventListener("click", InputCheck);
-
 function InputCheck()
 {
     //Retrieves each input object.
-    let RowInput = document.getElementById("gameRow");
-    let ColInput = document.getElementById("gameColumn");
-    let BombInput = document.getElementById("gameBomb");
+    let RowInput = document.getElementById("uGR");
+    let ColInput = document.getElementById("uGC");
+    let BombInput = document.getElementById("uB");
 
     //Check to see if the user has changed the placeholder values.
     let NumRows = (RowInput.value == "") ? RowInput.placeholder : RowInput.value;
