@@ -1,3 +1,7 @@
+//TODO: Write function to replace toplevel code
+//TODO: Replace dummy functions with revealAlgorithm
+//TODO: Write function to update table with game-loss images
+
 class Key {
     constructor() {
         this.key_list = {
