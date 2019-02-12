@@ -65,10 +65,9 @@ function build_html_table(grid){
     return html_table;
 }
 
-//TODO: Replace the following two functions with RevealAlgo / PlaceFlag, respectively
-function dummy(i, j){
-    console.log(i.toString(), j.toString());
-}
+// function get_coord_array(i, j){
+//     return [i, j];
+// }
 
 function style_table(html_table) {
     //style <table>
@@ -90,7 +89,9 @@ function style_table(html_table) {
     return html_table;
 }
 
+//TODO: Change param to 'user_2D_array', uncomment first line in func, and call this to update html game board
 function place_grid(html_table) {
+    // let html_table = style_table(build_html_table(user_2D_array));
     let div = document.getElementById('hold_grid');
     let old_table = document.getElementById('game_board');
 
