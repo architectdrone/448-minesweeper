@@ -34,6 +34,7 @@ function get_elem_img(value){
 
 function build_html_table(grid){
     let html_table = document.createElement("table");
+    html_table.setAttribute('id', 'game_board');
 
     for (let i = 0; i < grid.length; i++) {
         let row = document.createElement('tr');
@@ -42,16 +43,13 @@ function build_html_table(grid){
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
             let img = get_elem_img(grid[i][j]);
-            let on_click = dummy;
-            let on_right_click = right_dummy;
-
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                on_click(i, j);
+                dummy(i, j);
             });
             data.addEventListener('contextmenu',  function (){
-                on_right_click(i, j);
+                right_dummy(i, j);
             });
 
             row.appendChild(data);
@@ -60,6 +58,7 @@ function build_html_table(grid){
     return html_table;
 }
 
+//Replace the following two functions with RevealAlgo / PlaceFlag, respectively
 function dummy(i, j){
     console.log(i.toString(), j.toString());
 }
@@ -67,6 +66,7 @@ function dummy(i, j){
 function right_dummy(i, j){
     console.log("Right", i.toString(), j.toString())
 }
+
 function style_table(html_table) {
     //style <table>
     html_table.style.tableLayout = "fixed";
@@ -89,15 +89,20 @@ function style_table(html_table) {
 
 function place_grid(html_table) {
     let div = document.getElementById('hold_grid');
+    let old_table = document.getElementById('game_board');
+
+    if (old_table !== null) {
+        div.removeChild(div.childNodes[0]);
+    }
     div.appendChild(html_table);
 }
 
 
 let test_grid = [
     [-1, -1, 0],
-    [1, 2,  3],
-    [ 4,  5,  6],
-    [7 ,  8,  9]
+    [1,  2,  3],
+    [4,  5,  6],
+    [7 , 8,  9]
 ];
 let html_table = style_table(build_html_table(test_grid));
 window.onload = () => place_grid(html_table);
