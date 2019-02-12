@@ -6,31 +6,31 @@
     <title>Meet the Forkers</title>
     <link rel="stylesheet" href="master.css">
   </head>
-  <body onload="InputCheck()"> <!--Do we need InputCheck() to be ran on body load?-->
-    <h1>This is the header for the page of EECS 448's own Forkers.</h1>
-    <h3>This page is made to host the minesweeper game.</h3>
+  <body> <!--Do we need InputCheck() to be ran on body load?-->
+    <div class="header">
+      <h2>EECS 448's own Forkers.</h2>
+      <h5 id="subtitle">This page is made to host our minesweeper game.</h5>
+    </div>
 
-    <div class="userInput">
-      <form class="inputForGame" autocomplete="on">
+
+    <div class="header" class="userInput">
+      <form autocomplete="on">
         <p id="inputP">
           <label class="inputLabel" id="gameRow">Number of rows:</label>
-          <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2">
+          <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2" required>
         </p>
         <p id="inputP">
           <label class="inputLabel" id="gameColumn">Number of columns:</label>
-          <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2">
+          <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2" required>
         </p>
         <p id="inputP">
           <label class="inputLabel" id="gameBomb">Number of bombs:</label>
-          <input class="inputLabel" id="uB" type="number" name="gameBomb" placeholder="2" min="1" max="">
+          <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="2" min="1" max="" width="600" required style="resize:none;">
         </p>
-          <button name="userSubmitBoard" id="CreateButton" onclick="InputCheck()">Create Minesweeper Game</button>
+          <button name="userSubmitBoard" id="CreateButton" onfocus="maxCheck()" onmouseover="maxCheck()">Create Minesweeper Game</button>
       </form>
 
       <script>
-        var asdf = document.getElementById("gameBomb");
-
-        asdf.max = 5;
       </script>
 
 

@@ -1,7 +1,7 @@
 body
 {
-  background-color: white;
-  font-family: "Comic Sans MS";
+  background-color: #f1ca73;
+  font-family: system-ui;
 }
 
 .inputForGame
@@ -11,10 +11,30 @@ body
 
 #inputP
 {
-  display: table-row;
+ display: table-row;
 }
 
 .inputLabel
 {
   display: table-cell;
+  border: none;
+  border-color:transparent;
+}
+
+.header
+{
+  position:relative;
+  left:12px;
+  top:5px;
+}
+
+#subtitle
+{
+  position:relative;
+  bottom:15px;
+}
+
+#uB
+{
+  resize:none;
 }
