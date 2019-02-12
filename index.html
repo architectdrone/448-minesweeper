@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="TopLevel.js"></script>
     <meta charset="utf-8">
     <title>Meet the Forkers</title>
     <link rel="stylesheet" href="master.css">
   </head>
-  <body onload="InputCheck()">
+  <body onload="InputCheck()"> <!--Do we need InputCheck() to be ran on body load?-->
     <h1>This is the header for the page of EECS 448's own Forkers.</h1>
     <h3>This page is made to host the minesweeper game.</h3>
 
@@ -21,11 +22,18 @@
         </p>
         <p id="inputP">
           <label class="inputLabel" id="gameBomb">Number of bombs:</label>
-          <input class="inputLabel" id="uB" type="number" name="gameBomb" placeholder="2" min="1" max="limitBombs()">
+          <input class="inputLabel" id="uB" type="number" name="gameBomb" placeholder="2" min="1" max="">
         </p>
           <button name="userSubmitBoard" id="CreateButton" onclick="InputCheck()">Create Minesweeper Game</button>
       </form>
+
+      <script>
+        var asdf = document.getElementById("gameBomb");
+
+        asdf.max = 5;
+      </script>
+
+
     </div>
   </body>
-  <script src="TopLevel.js"></script>
 </html>
