@@ -46,10 +46,17 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                dummy(i, j);
+                if (this.childNodes[0].getAttribute('id') !== 'flag') {
+                    // get_coord_array(i, j);
+                }
             });
             data.addEventListener('contextmenu',  function (){
-                right_dummy(i, j);
+                if (this.childNodes[0].getAttribute('id') === 'concealed') {
+                   // get_coord_array(i, j);
+                }
+                else if (this.childNodes[0].getAttribute('id') === 'flag') {
+
+                }
             });
 
             row.appendChild(data);
@@ -58,13 +65,9 @@ function build_html_table(grid){
     return html_table;
 }
 
-//Replace the following two functions with RevealAlgo / PlaceFlag, respectively
+//TODO: Replace the following two functions with RevealAlgo / PlaceFlag, respectively
 function dummy(i, j){
     console.log(i.toString(), j.toString());
-}
-
-function right_dummy(i, j){
-    console.log("Right", i.toString(), j.toString())
 }
 
 function style_table(html_table) {
