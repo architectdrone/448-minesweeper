@@ -45,6 +45,22 @@ function draw() {
 
 }
 
+function create_user_board(rows, cols){
+  let array2D = new Array(row);
+  for (let i = 0; i < array2D.length; i++)
+  {
+      array2D[i] = new Array(col);
+  }
+  for(var i=0; i<rows; i++)
+  {
+    for(var j=0; j<cols; j++)
+    {
+        array2D[i][j]=new Square(i, j, w);
+      }
+    }
+  return(array2D);
+}
+
 function mousePressed(){
 if(mouseButton === LEFT)
 {
@@ -101,6 +117,7 @@ function Square(i, j, w)
   this.bomb = false;
   this.revealed=false;
   this.flagged=false;
+  this.key=-1;
 }
 
 Square.prototype.show = function(){
@@ -142,6 +159,7 @@ Square.prototype.recreveal = function(){
     this.revealed=true;
   if(this.bombnearby==0)
     {
+        this.key=0;
         if(this.i+1<rows && this.j+1<cols && this.i+1>=0 && this.j+1>=0)
       {
         if(!grid[this.i+1][this.j+1].revealed)
@@ -202,6 +220,7 @@ Square.prototype.recreveal = function(){
   else
     {
        this.revealed = true;
+       this.key = this.bombnearby;
           }
   }
   else {
@@ -284,4 +303,10 @@ Square.prototype.placebommb = function(){
 
 Square.prototype.flag = function(){
   this.flagged=true;
+  this.key=9;
 }
+let rows = 3;
+let cols = 3;
+
+let user_board = create_user_board(rows, cols);
+console.log(user_board);
