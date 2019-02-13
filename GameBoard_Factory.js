@@ -46,7 +46,7 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                data.reveal_algorithm();
+                data.recreveal();
                 place_grid(grid);
             });
             data.addEventListener('contextmenu',  function (){
