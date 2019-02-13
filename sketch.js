@@ -45,7 +45,7 @@ function draw() {
 
 }
 
-function create_user_board(rows, cols){
+function create_user_board(rows1, cols1){
   let array2D = new Array(row);
   for (let i = 0; i < array2D.length; i++)
   {
@@ -305,8 +305,8 @@ Square.prototype.flag = function(){
   this.flagged=true;
   this.key=9;
 }
-let rows = 3;
-let cols = 3;
+let rows1 = 3;
+let cols2 = 3;
 
 let user_board = create_user_board(rows, cols);
 console.log(user_board);
