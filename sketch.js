@@ -1,5 +1,6 @@
 function setup() {
-  createCanvas(201, 201);
+  let width=100;
+  let height=100;
   cols=floor(width/w);
   rows=floor(height/w);
   grid=Array2DCreator(cols, rows);
@@ -33,63 +34,6 @@ function setup() {
        }
   }
 
-function draw() {
-  background(255);
-  for(var i=0; i<rows; i++)
-  {
-    for(var j=0; j<cols; j++)
-    {
-       grid[i][j].show();
-    }
-  }
-}
-
-// function create_user_board(rows1, cols1){
-//   let array2D = new Array(rows1);
-//   for (let i = 0; i < array2D.length; i++)
-//   {
-//       array2D[i] = new Array(cols1);
-//   }
-//   for(var i=0; i<rows1; i++)
-//   {
-//     for(var j=0; j<cols1; j++)
-//     {
-//         array2D[i][j]=new Square(i, j, 5);
-//       }
-//     }
-//   return(array2D);
-// }
-
-
-function mousePressed(){
-if(mouseButton === LEFT)
-{
-  for(var i=0; i<rows; i++)
-  {
-    for(var j=0; j<cols; j++)
-    {
-        if(grid[i][j].contains(mouseX, mouseY))
-        {
-          grid[i][j].recreveal();
-        }
-      }
-    }
-  }
-  if(mouseButton == RIGHT)
-  {
-    for(var i=0; i<rows; i++)
-    {
-      for(var j=0; j<cols; j++)
-      {
-          if(grid[i][j].contains(mouseX, mouseY))
-          {
-            grid[i][j].flag();
-          }
-        }
-      }
-  }
-   print(mouseButton);
-}
 
 function Array2DCreator(col, row) {
     let array2D = new Array(row);
@@ -105,8 +49,6 @@ var grid;
 var cols;
 var rows;
 var w=20;
-let rows1 = 3;
-let cols2 = 3;
 
 let user_board = create_user_board(rows1, cols1);
 
@@ -124,37 +66,37 @@ function Square(i, j, w)
   this.key=-1;
 }
 
-Square.prototype.show = function(){
-	stroke(0);
-  noFill();
-  rect(this.x, this.y, this.w, this.w);
-  if (this.revealed)
-  {
-    if(this.bomb)
-    {
-
-      ellipse(this.x+this.w*0.5, this.y+10, this.w*0.5);
-    }
-    else {
-          if(this.bombnearby>0)
-          {
-           textAlign(CENTER);
-           text(this.bombnearby, this.x+10, this.y+14);
-         }
-         else{
-           let c=color(220);
-           fill(c);
-           noStroke();
-           rect(this.x, this.y, this.w-1, this.w-1);
-         }
-      }
-    }
-    if(this.flagged)
-    {
-      textAlign(CENTER);
-      text("F", this.x+10, this.y+14);
-    }
-  }
+// Square.prototype.show = function(){
+// 	stroke(0);
+//   noFill();
+//   rect(this.x, this.y, this.w, this.w);
+//   if (this.revealed)
+//   {
+//     if(this.bomb)
+//     {
+//
+//       ellipse(this.x+this.w*0.5, this.y+10, this.w*0.5);
+//     }
+//     else {
+//           if(this.bombnearby>0)
+//           {
+//            textAlign(CENTER);
+//            text(this.bombnearby, this.x+10, this.y+14);
+//          }
+//          else{
+//            let c=color(220);
+//            fill(c);
+//            noStroke();
+//            rect(this.x, this.y, this.w-1, this.w-1);
+//          }
+//       }
+//     }
+//     if(this.flagged)
+//     {
+//       textAlign(CENTER);
+//       text("F", this.x+10, this.y+14);
+//     }
+//   }
 
 
 Square.prototype.recreveal = function(){
