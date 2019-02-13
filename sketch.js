@@ -42,24 +42,24 @@ function draw() {
        grid[i][j].show();
     }
   }
-
 }
 
-function create_user_board(rows1, cols1){
-  let array2D = new Array(rows1);
-  for (let i = 0; i < array2D.length; i++)
-  {
-      array2D[i] = new Array(cols1);
-  }
-  for(var i=0; i<rows1; i++)
-  {
-    for(var j=0; j<cols1; j++)
-    {
-        array2D[i][j]=new Square(i, j, w);
-      }
-    }
-  return(array2D);
-}
+// function create_user_board(rows1, cols1){
+//   let array2D = new Array(rows1);
+//   for (let i = 0; i < array2D.length; i++)
+//   {
+//       array2D[i] = new Array(cols1);
+//   }
+//   for(var i=0; i<rows1; i++)
+//   {
+//     for(var j=0; j<cols1; j++)
+//     {
+//         array2D[i][j]=new Square(i, j, 5);
+//       }
+//     }
+//   return(array2D);
+// }
+
 
 function mousePressed(){
 if(mouseButton === LEFT)
@@ -105,6 +105,10 @@ var grid;
 var cols;
 var rows;
 var w=20;
+let rows1 = 3;
+let cols2 = 3;
+
+let user_board = create_user_board(rows1, cols1);
 
 function Square(i, j, w)
 {
@@ -305,8 +309,7 @@ Square.prototype.flag = function(){
   this.flagged=true;
   this.key=9;
 }
-let rows1 = 3;
-let cols2 = 3;
 
-let user_board = create_user_board(rows, cols);
-console.log(user_board);
+Square.prototype.keyprinting = function(){
+  console.log(this.key);
+}
