@@ -3,8 +3,7 @@
 /*
 Function Allows for the creation of a
 two dimensional array
- */
-
+*/
 
 function Array2DCreator(col, row) {
     let array2D = new Array(row);      //define outer array
@@ -15,6 +14,20 @@ function Array2DCreator(col, row) {
 
     return(array2D);
 }
+
+
+
+function build_grid(row, col) {
+    let array2D = new Array(row);
+    for (let i = 0; i < array2D.length; i++) {
+        array2D[i] = new Array(col);
+        for (let j = 0; j < array2D[i].length; j++) {
+            array2D[i][j] = -1;
+        }
+    }
+    return array2D;
+}
+
 /*
 Function simply takes the row and col parameter and calls
 array creator function to intialize a 2d array. After doing so,
@@ -27,7 +40,7 @@ function return_2DBoard(row,col,bombNum)
     let bombPlacement1;
     let bombPlacement2;
 
-    let key2DArray = Array2DCreator(col,row);      //define outer array
+    let key2DArray = build_grid(col,row);      //define outer array
 
     for (let i = 0; i <bombNum; i ++)
     {
