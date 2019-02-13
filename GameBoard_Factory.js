@@ -46,10 +46,12 @@ function build_html_table(grid){
             data.addEventListener('click',  function (){
                 data.recreveal();
                 place_grid(grid);
+                console.log('left-click');
             });
             data.addEventListener('contextmenu',  function (){
                 data.flag();
                 place_grid(grid);
+                console.log('right-click')
             });
 
             row.appendChild(data);
