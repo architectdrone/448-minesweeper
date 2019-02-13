@@ -50,7 +50,6 @@ var cols;
 var rows;
 var w=20;
 
-let user_board = create_user_board(rows1, cols1);
 
 function Square(i, j, w)
 {
