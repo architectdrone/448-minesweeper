@@ -1,5 +1,3 @@
-//TODO: Write function to replace toplevel code
-//TODO: Replace dummy functions with revealAlgorithm
 //TODO: Write function to update table with game-loss images
 
 class Key {
@@ -50,7 +48,8 @@ function build_html_table(grid){
                 place_grid(grid);
             });
             data.addEventListener('contextmenu',  function (){
-                data.flag()
+                data.flag();
+                place_grid(grid);
             });
 
             row.appendChild(data);
@@ -79,7 +78,6 @@ function style_table(html_table) {
     return html_table;
 }
 
-//TODO: Change param to 'user_2D_array', uncomment first line in func, and call this to update html game board
 function place_grid(array2D) {
     let html_table = style_table(build_html_table(array2D));
     let div = document.getElementById('msBoard');
