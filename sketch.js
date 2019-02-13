@@ -46,14 +46,14 @@ function draw() {
 }
 
 function create_user_board(rows1, cols1){
-  let array2D = new Array(row);
+  let array2D = new Array(rows1);
   for (let i = 0; i < array2D.length; i++)
   {
-      array2D[i] = new Array(col);
+      array2D[i] = new Array(cols1);
   }
-  for(var i=0; i<rows; i++)
+  for(var i=0; i<rows1; i++)
   {
-    for(var j=0; j<cols; j++)
+    for(var j=0; j<cols1; j++)
     {
         array2D[i][j]=new Square(i, j, w);
       }
