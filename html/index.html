@@ -8,49 +8,52 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"
   </head>
   <body>
-
     <div class="title-bar">
       <img src="../img/minesweeper.png" alt="Minesweeper Image" id="msweeper">
       <span id="titleTag">Minesweeper(c). Made by Miller Bath, Alex Wittman, Adam Wallace, Teddy Kahawj, and Allen Lu.</span>
       <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
     </div>
 
-    <div class="header">
-      <h2>EECS 448's own Forkers.</h2>
-      <h5 id="subtitle">This page was made to host our minesweeper game.</h5>
-    </div>
+    <center>
+      <div class="header">
+        <h2>EECS 448's own Forkers.</h2>
+        <h5 id="subtitle">This page was made to host our minesweeper game.</h5>
+      </div>
 
-    <div class="header" class="userInput">
-      <form autocomplete="on" name="form" id="msform">
-        <p id="inputP">
-          <label class="inputLabel" id="gameRow">Number of <u>r</u>ows:</label>
-          <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2" required>
-        </p>
-        <p id="inputP">
-          <label class="inputLabel" id="gameColumn">Number of <u>c</u>olumns:</label>
-          <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2" required>
-        </p>
-        <p id="inputP">
-          <label class="inputLabel" id="gameBomb">Number of <u>b</u>ombs:</label>
-          <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="2" min="1" max="" width="600" required style="resize:none;">
-        </p>
-          <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
-          <button type="submit" id="CreateButton" name="submission"></button>
-      </form>
+      <div class="header" class="userInput">
+        <form autocomplete="on" name="form" id="msform">
+          <p id="inputP">
+            <label class="inputLabel" id="gameRow">Number of <u>r</u>ows:</label>
+            <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2" required>
+          </p>
+          <p id="inputP">
+            <label class="inputLabel" id="gameColumn">Number of <u>c</u>olumns:</label>
+            <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2" required>
+          </p>
+          <p id="inputP">
+            <label class="inputLabel" id="gameBomb">Number of <u>b</u>ombs:</label>
+            <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="2" min="1" max="" width="600" required style="resize:none;">
+          </p>
+            <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
+            <button type="submit" id="CreateButton" name="submission"></button>
+        </form>
+      </div>
 
-    </div>
+      <div id="msBoard">
+        
+      <div>
 
-    <div class="taskbarDiv">
-      <img src="../img/taskbar.png" alt="Taskbar" id="taskbar">
+      <div class="taskbarDiv">
+        <img src="../img/taskbar.png" alt="Taskbar" id="taskbar">
 
-    </div>
+      </div>
 
-    <div class="gorillaDiv">
-      <img src="../img/gorilla.gif" alt="Gorilla Image" id="gorilla">
-    </div>
+      <div class="gorillaDiv">
+        <img src="../img/gorilla.gif" alt="Gorilla Image" id="gorilla">
+      </div>
 
 
-
+  </center>
   </body>
   <script src="../js/TopLevel.js"></script>
 </html>
