@@ -29,7 +29,7 @@ function create_image_element(path){
 
 function get_elem_img(value){
     let key = new Key();
-    return key.key_list[value.toString()]
+    return key.key_list[value.toString()];
 }
 
 function build_html_table(grid){
@@ -42,13 +42,12 @@ function build_html_table(grid){
 
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
-            let img = get_elem_img(grid[i][j]);
+            let img = get_elem_img(grid[i][j]); //TODO: Change to grid[i][j].key
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                if (this.childNodes[0].getAttribute('id') !== 'flag') {
-                    // get_coord_array(i, j);
-                }
+                // reveal_algorithm(user_board, i, j);
+                // place_grid(user_board);
             });
             data.addEventListener('contextmenu',  function (){
                 if (this.childNodes[0].getAttribute('id') === 'concealed') {
@@ -64,10 +63,6 @@ function build_html_table(grid){
     }
     return html_table;
 }
-
-// function get_coord_array(i, j){
-//     return [i, j];
-// }
 
 function style_table(html_table) {
     //style <table>
@@ -90,9 +85,9 @@ function style_table(html_table) {
 }
 
 //TODO: Change param to 'user_2D_array', uncomment first line in func, and call this to update html game board
-function place_grid(html_table) {
-    // let html_table = style_table(build_html_table(user_2D_array));
-    let div = document.getElementById('hold_grid');
+function place_grid(array2D) {
+    let html_table = style_table(build_html_table(array2D));
+    let div = document.getElementById('msBoard');
     let old_table = document.getElementById('game_board');
 
     if (old_table !== null) {
@@ -100,13 +95,13 @@ function place_grid(html_table) {
     }
     div.appendChild(html_table);
 }
-
-
-let test_grid = [
-    [-1, -1, 0],
-    [1,  2,  3],
-    [4,  5,  6],
-    [7 , 8,  9]
-];
-let html_table = style_table(build_html_table(test_grid));
-window.onload = () => place_grid(html_table);
+//
+//
+// let test_grid = [
+//     [-1, -1, 0],
+//     [1,  2,  3],
+//     [4,  5,  6],
+//     [7 , 8,  9]
+// ];
+// let html_table = style_table(build_html_table(test_grid));
+// window.onload = () => place_grid(html_table);
