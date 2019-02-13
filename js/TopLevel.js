@@ -10,18 +10,22 @@ function maxCheck()
 
 function CreateBoard(NumRows, NumCols, NumBombs)
 {
-
     //Uncomment the next line when the board creation functions are complete.
     //Fill_Algo(NumRows, NumCols, NumBombs);
-
+    //place_grid(test_grid);
 }
 
-//gives javascript the reins for not letting page reload
-form = document.getElementById('msform');
-form.addEventListener('submit',(event) =>{
-  console.log("Hello world");
-  event.preventDefault();
-});
+
+function Load()
+{
+  //gives javascript the reins for not letting page reload
+  form = document.getElementById('msform');
+  form.addEventListener('submit',(event) =>{
+    event.preventDefault();
+  });
+
+  CreateBoard(15, 15, 15);
+}
 
 
 //fix positioning on form and header
