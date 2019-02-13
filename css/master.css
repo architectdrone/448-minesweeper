@@ -4,6 +4,9 @@ body
   font-family: 'VT323','Comic Sans MS';
   font-size:
   weight:400;
+  margin:0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .inputForGame
@@ -25,8 +28,7 @@ body
 .header
 {
   position:relative;
-  left:0.750em;
-  top:0em;
+  margin:auto;
 }
 
 #subtitle
@@ -55,8 +57,12 @@ body
 
 #CreateButton
 {
-  width:4.250em;
-  height:1.375em;
+  position:relative;
+  left:5px;
+  width:6.250em;
+  height:1.75em;
+  background-image:url('../img/ok.png');
+  background-size:6.250em 1.75em;
 }
 
 #msweeper
@@ -125,4 +131,12 @@ body
 {
   border-style:inset;
   border-width:3px;
+  min-width:150px;
+  width:150px;
+
+}
+
+.formDiv
+{
+
 }

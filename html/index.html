@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="../js/TopLevel.js"></script>
     <meta charset="utf-8">
     <title>Meet the Forkers</title>
     <link rel="stylesheet" href="../css/master.css">
@@ -22,7 +21,7 @@
     </div>
 
     <div class="header" class="userInput">
-      <form autocomplete="on">
+      <form autocomplete="on" name="form" id="msform">
         <p id="inputP">
           <label class="inputLabel" id="gameRow">Number of <u>r</u>ows:</label>
           <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2" required>
@@ -36,8 +35,7 @@
           <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="2" min="1" max="" width="600" required style="resize:none;">
         </p>
           <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
-          <img src="../img/ok.png" alt="OK" id="CreateButton" onfocus="maxCheck()" onmouseover="maxCheck()" onclick="CreateBoard()">
-          <!--<button name="userSubmitBoard" id="CreateButton" onfocus="maxCheck()" onmouseover="maxCheck()">Create Minesweeper Game</button>-->
+          <button type="submit" id="CreateButton" name="submission"></button>
       </form>
 
     </div>
@@ -51,5 +49,8 @@
       <img src="../img/gorilla.gif" alt="Gorilla Image" id="gorilla">
     </div>
 
+
+
   </body>
+  <script src="../js/TopLevel.js"></script>
 </html>
