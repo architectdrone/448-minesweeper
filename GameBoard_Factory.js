@@ -5,17 +5,17 @@
 class Key {
     constructor() {
         this.key_list = {
-            '-1': create_image_element('img/square.png'),
-            '0' : create_image_element('img/empty.png'),
-            '1' : create_image_element('img/number-1.png'),
-            '2' : create_image_element('img/number-2.png'),
-            '3' : create_image_element('img/number-3.png'),
-            '4' : create_image_element('img/number-4.png'),
-            '5' : create_image_element('img/number-5.png'),
-            '6' : create_image_element('img/number-6.png'),
-            '7' : create_image_element('img/number-7.png'),
-            '8' : create_image_element('img/number-8.png'),
-            '9' : create_image_element('img/flag.png')
+            '-1': create_image_element('../img/square.png'),
+            '0' : create_image_element('../img/empty.png'),
+            '1' : create_image_element('../img/number-1.png'),
+            '2' : create_image_element('../img/number-2.png'),
+            '3' : create_image_element('../img/number-3.png'),
+            '4' : create_image_element('../img/number-4.png'),
+            '5' : create_image_element('../img/number-5.png'),
+            '6' : create_image_element('../img/number-6.png'),
+            '7' : create_image_element('../img/number-7.png'),
+            '8' : create_image_element('../img/number-8.png'),
+            '9' : create_image_element('../img/flag.png')
         }
     }
 }
@@ -42,20 +42,15 @@ function build_html_table(grid){
 
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
-            let img = get_elem_img(grid[i][j]); //TODO: Change to grid[i][j].key
+            let img = get_elem_img(grid[i][j].key); //TODO: Change to grid[i][j].key
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                // reveal_algorithm(user_board, i, j);
-                // place_grid(user_board);
+                data.reveal_algorithm();
+                place_grid(grid);
             });
             data.addEventListener('contextmenu',  function (){
-                if (this.childNodes[0].getAttribute('id') === 'concealed') {
-                   // get_coord_array(i, j);
-                }
-                else if (this.childNodes[0].getAttribute('id') === 'flag') {
-
-                }
+                data.flag()
             });
 
             row.appendChild(data);
