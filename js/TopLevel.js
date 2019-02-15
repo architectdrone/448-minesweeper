@@ -12,7 +12,24 @@ function CreateBoard(NumRows, NumCols, NumBombs)
 {
     //Uncomment the next line when the board creation functions are complete.
     //Fill_Algo(NumRows, NumCols, NumBombs);
-    //place_grid(test_grid);
+    if(NumRows == "")
+    {
+      let RowInput = document.getElementById("uGR");
+      NumRows = (RowInput.value == "") ? RowInput.placeholder : RowInput.value;
+    }
+    if(NumCols == "")
+    {
+      let ColInput = document.getElementById("uGC");
+      NumCols = (ColInput.value == "") ? ColInput.placeholder : ColInput.value;
+    }
+    if(NumBombs == "")
+    {
+      let BombInput = document.getElementById("uB");
+      console.log(BombInput);
+      NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
+    }
+    console.log(NumRows, NumCols, NumBombs);
+    place_grid(setup(NumRows, NumCols, NumBombs));
 }
 
 
