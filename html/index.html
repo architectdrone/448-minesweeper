@@ -5,7 +5,7 @@
     <title>Meet the Forkers</title>
     <link rel="stylesheet" href="../css/master.css">
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   </head>
   <body onload="Load()">
     <div class="title-bar">
@@ -24,15 +24,15 @@
         <form autocomplete="on" name="form" id="msform">
           <p id="inputP">
             <label class="inputLabel" id="gameRow">Number of <u>r</u>ows:</label>
-            <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="2" min="2" required>
+            <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="15" min="2" required>
           </p>
           <p id="inputP">
             <label class="inputLabel" id="gameColumn">Number of <u>c</u>olumns:</label>
-            <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="2" min="2" required>
+            <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="15" min="2" required>
           </p>
           <p id="inputP">
             <label class="inputLabel" id="gameBomb">Number of <u>b</u>ombs:</label>
-            <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="2" min="1" max="" width="600" required style="resize:none;">
+            <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="15" min="1" max="" width="600" required style="resize:none;">
           </p>
             <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
             <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
