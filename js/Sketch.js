@@ -57,7 +57,6 @@ function Square(i, j)
   this.bombnearby=0;
   this.bomb = false;
   this.revealed=false;
-  this.flagged=false;
   this.key=-1;
 }
 
@@ -200,15 +199,26 @@ Square.prototype.checkNeighbor = function(grid, rows, cols){
   this.bombnearby += this.BottomRight(IsBomb);
 }
 
-Square.prototype.placebommb = function(){
-   this.bomb=true;
-}
-
 Square.prototype.flag = function(){
-  this.flagged=true;
-  this.key=9;
+  if (this.revealed === false && this.key !== 9) {
+    this.oldKey = this.key;
+    this.key = 9;
+  }
+  else if (this.key === 9){
+    this.key = this.oldKey;
+  }
 }
 
-Square.prototype.keyprinting = function(){
-  console.log(this.key);
+function checkWinCondition(grid){
+  for (let i = 0; i < grid.length; i++){
+    for (let j = 0; j < grid.length; j++){
+      if (this.bomb === true && this.key !== 9){
+        return false;
+      }
+      else if (this.bomb === false && (this.key === -1 || this.key === -9)){
+      return false;
+      }
+    }
+  }
+  return true;
 }
