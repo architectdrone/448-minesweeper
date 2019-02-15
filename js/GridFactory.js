@@ -42,7 +42,7 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                grid[i][j].recreveal(grid, grid.length, grid[i].length);
+                grid[i][j].recreveal();
                 place_grid(grid);
             });
             data.addEventListener('contextmenu',  function (){
