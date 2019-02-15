@@ -26,12 +26,12 @@
 //   }
 
 function setup(rows, cols, numBombs){
-  grid = Array2DCreator(rows, cols);
+  let grid = Array2DCreator(rows, cols);
   PlaceBombs(grid, numBombs);
 
   for (let j = 0; j < grid.length; j++) {
     for (let k = 0; k < grid[j].length; k++){
-      grid[j][k].checkNeighbor(rows, cols);
+      grid[j][k].checkNeighbor(grid, rows, cols);
     }
   }
   return grid;
@@ -40,6 +40,7 @@ function setup(rows, cols, numBombs){
 
 function PlaceBombs(grid, numBombs)
 {
+  console.log(grid);
   let x = (Math.floor(Math.random() * grid.length));
   let y = (Math.floor(Math.random() * grid[x].length));
     for(let i=0; i<numBombs; i++){
@@ -55,6 +56,7 @@ function PlaceBombs(grid, numBombs)
 
 function Array2DCreator(row, col) {
     let array2D = new Array(row);
+    console.log(typeof(row));
     for (let i = 0; i < array2D.length; i++){
         array2D[i] = new Array(col);
 
@@ -78,80 +80,81 @@ function Square(i, j)
   this.key=-1;
 }
 
-Square.prototype.recreveal = function(rows, cols){
+Square.prototype.recreveal = function(grid, rows, cols){
   if(this.bomb === false)
   {
     this.revealed=true;
-  if(this.bombnearby==0)
+    if(this.bombnearby==0)
     {
         this.key=0;
         if(this.i+1<rows && this.j+1<cols && this.i+1>=0 && this.j+1>=0)
       {
         if(!grid[this.i+1][this.j+1].revealed)
       {
-        grid[this.i+1][this.j+1].recreveal(rows, cols);
+        grid[this.i+1][this.j+1].recreveal(grid, rows, cols);
         }
       }
       if(this.i-1<rows && this.j-1<cols && this.i-1>=0 && this.j-1>=0)
       {
         if(!grid[this.i-1][this.j-1].revealed)
         {
-          grid[this.i-1][this.j-1].recreveal(rows, cols);
+          grid[this.i-1][this.j-1].recreveal(grid, rows, cols);
         }
       }
       if(this.i+1<rows && this.j-1<cols && this.i+1>=0 && this.j-1>=0)
       {
         if(!grid[this.i+1][this.j-1].revealed)
         {
-          grid[this.i+1][this.j-1].recreveal(rows, cols);
+          grid[this.i+1][this.j-1].recreveal(grid, rows, cols);
         }
       }
       if(this.i-1<rows && this.j+1<cols && this.i-1>=0 && this.j+1>=0)
       {
         if(!grid[this.i-1][this.j+1].revealed)
        {
-         grid[this.i-1][this.j+1].recreveal(rows, cols);
+         grid[this.i-1][this.j+1].recreveal(grid, rows, cols);
        }
       }
       if(this.j+1<cols)
       {
         if(!grid[this.i][this.j+1].revealed)
         {
-          grid[this.i][this.j+1].recreveal(rows, cols);
+          grid[this.i][this.j+1].recreveal(grid, rows, cols);
         }
       }
       if(this.j-1>=0)
       {
         if(!grid[this.i][this.j-1].revealed)
        {
-        grid[this.i][this.j-1].recreveal(rows, cols);
+        grid[this.i][this.j-1].recreveal(grid, rows, cols);
        }
       }
       if(this.i+1<rows)
       {
         if(!grid[this.i+1][this.j].revealed)
        {
-         grid[this.i+1][this.j].recreveal(rows, cols);
+         grid[this.i+1][this.j].recreveal(grid, rows, cols);
        }
       }
       if(this.i-1>=0)
       {
         if(!grid[this.i-1][this.j].revealed)
         {
-          grid[this.i-1][this.j].recreveal(rows, cols);
+          grid[this.i-1][this.j].recreveal(grid, rows, cols);
         }
       }
-          }
-  else
+    }
+    else
     {
-       this.revealed = true;
-       this.key = this.bombnearby;
-          }
-  }
-  else {
-           this.revealed = true;
+      this.revealed = true;
+      this.key = this.bombnearby;
     }
   }
+  else
+  {
+    this.revealed = true;
+  }
+}
 
 
 Square.prototype.contains = function(x,y){
@@ -161,7 +164,7 @@ Square.prototype.contains = function(x,y){
   }
 }
 
-Square.prototype.checkNeighbor = function(rows, cols){
+Square.prototype.checkNeighbor = function(grid, rows, cols){
     let countbombs=0;
 if(this.i+1<rows && this.j+1<cols && this.i+1>=0 && this.j+1>=0)
 {
