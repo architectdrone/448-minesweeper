@@ -42,7 +42,7 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                grid[i][j].recreveal();
+                grid[i][j].recreveal(grid, grid.length, grid[i].length);
                 place_grid(grid);
             });
             data.addEventListener('contextmenu',  function (){
@@ -80,7 +80,6 @@ function place_grid(array2D) {
     let html_table = style_table(build_html_table(array2D));
     let div = document.getElementById('msBoard');
     let old_table = document.getElementById('game_board');
-    console.log(div);
     if (old_table !== null) {
         div.removeChild(old_table);
     }
