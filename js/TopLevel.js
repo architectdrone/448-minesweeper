@@ -10,8 +10,6 @@ function maxCheck()
 
 function CreateBoard(NumRows, NumCols, NumBombs)
 {
-    //Uncomment the next line when the board creation functions are complete.
-    //Fill_Algo(NumRows, NumCols, NumBombs);
     if(NumRows == undefined)
     {
       let RowInput = document.getElementById("uGR");
@@ -27,7 +25,7 @@ function CreateBoard(NumRows, NumCols, NumBombs)
       let BombInput = document.getElementById("uB");
       NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
     }
-    place_grid(setup(NumRows, NumCols, NumBombs));
+    place_grid(setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs)));
 }
 
 
@@ -39,7 +37,7 @@ function Load()
     event.preventDefault();
   });
 
-  CreateBoard(15, 15, 15);
+  CreateBoard(15, 15, 20);
 }
 
 
