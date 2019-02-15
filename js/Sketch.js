@@ -1,70 +1,76 @@
-function setup(height, width, numBombs) {
-  /*let width=100;
-  let height=100;
-  cols=Math.floor(width/w);
-  rows=Math.floor(height/w);*/
-  cols = width;
-  rows = height;
-  grid=Array2DCreator(cols, rows);
-  for(let i=0; i<rows; i++)
-  {
-    for(let j=0; j<cols; j++)
-    {
-        grid[i][j]=new Square(i, j, w);
-      }
+// function setup(height, width, numBombs) {
+//   /*let width=100;
+//   let height=100;
+//   cols=Math.floor(width/w);
+//   rows=Math.floor(height/w);*/
+//   cols = width;
+//   rows = height;
+//   grid=Array2DCreator(cols, rows);
+//   for(let i=0; i<rows; i++)
+//   {
+//     for(let j=0; j<cols; j++)
+//     {
+//         grid[i][j]=new Square(i, j, w);
+//       }
+//     }
+//     Placebomb(grid, rows, cols, numBombs);
+//
+//      for(let i=0; i<rows; i++)
+//      {
+//        for(let j=0; j<cols; j++)
+//        {
+//            grid[i][j].checkNeigbor();
+//          }
+//        }
+//       return grid;
+//   }
+
+function setup(rows, cols, numBombs){
+  grid = Array2DCreator(rows, cols);
+  PlaceBombs(grid, numBombs);
+
+  for (let j = 0; j < grid.length; j++) {
+    for (let k = 0; k < grid[j].length; k++){
+      grid[j][k].checkNeighbor(rows, cols);
     }
-    Placebomb(grid, rows, cols, numBombs);
-
-     for(let i=0; i<rows; i++)
-     {
-       for(let j=0; j<cols; j++)
-       {
-           grid[i][j].checkNeigbor();
-         }
-       }
-      return grid;
   }
+  return grid;
+}
 
-function Placebomb(grid, row, col, numBombs)
+
+function PlaceBombs(grid, numBombs)
 {
-  let i = (Math.floor(Math.random() * row));
-  let j = (Math.floor(Math.random() * col));
-    for(let k=0; k<numBombs; k++)
-    {
-      while(grid[i][j].bomb == true)
+  let x = (Math.floor(Math.random() * grid.length));
+  let y = (Math.floor(Math.random() * grid[x].length));
+    for(let i=0; i<numBombs; i++){
 
-      {
-        i = (Math.floor(Math.random() * row));
-        j = (Math.floor(Math.random() * col));
+      while(grid[x][y].bomb == true){
+        x = (Math.floor(Math.random() * grid.length));
+        y = (Math.floor(Math.random() * grid[x].length));
       }
-      grid[i][j].bomb = true;
+      grid[x][y].bomb = true;
   }
 }
 
 
-function Array2DCreator(col, row) {
+function Array2DCreator(row, col) {
     let array2D = new Array(row);
-    for (let i = 0; i < array2D.length; i++)
-    {
+    for (let i = 0; i < array2D.length; i++){
         array2D[i] = new Array(col);
-    }
 
+        for (let j = 0; j < array2D[i].length; j++){
+          array2D[i][j] = new Square(i, j);
+        }
+    }
     return(array2D);
 }
 
-let grid;
-let cols;
-let rows;
-let w=20;
 
-
-function Square(i, j, w)
+function Square(i, j)
 {
   this.i=i;
   this.j=j;
-  this.x = i*w;
-  this.y = j*w;
-  this.w = w;
+
   this.bombnearby=0;
   this.bomb = false;
   this.revealed=false;
@@ -72,40 +78,7 @@ function Square(i, j, w)
   this.key=-1;
 }
 
-// Square.prototype.show = function(){
-// 	stroke(0);
-//   noFill();
-//   rect(this.x, this.y, this.w, this.w);
-//   if (this.revealed)
-//   {
-//     if(this.bomb)
-//     {
-//
-//       ellipse(this.x+this.w*0.5, this.y+10, this.w*0.5);
-//     }
-//     else {
-//           if(this.bombnearby>0)
-//           {
-//            textAlign(CENTER);
-//            text(this.bombnearby, this.x+10, this.y+14);
-//          }
-//          else{
-//            let c=color(220);
-//            fill(c);
-//            noStroke();
-//            rect(this.x, this.y, this.w-1, this.w-1);
-//          }
-//       }
-//     }
-//     if(this.flagged)
-//     {
-//       textAlign(CENTER);
-//       text("F", this.x+10, this.y+14);
-//     }
-//   }
-
-
-Square.prototype.recreveal = function(){
+Square.prototype.recreveal = function(rows, cols){
   if(this.bomb === false)
   {
     this.revealed=true;
@@ -116,56 +89,56 @@ Square.prototype.recreveal = function(){
       {
         if(!grid[this.i+1][this.j+1].revealed)
       {
-        grid[this.i+1][this.j+1].recreveal();
+        grid[this.i+1][this.j+1].recreveal(rows, cols);
         }
       }
       if(this.i-1<rows && this.j-1<cols && this.i-1>=0 && this.j-1>=0)
       {
         if(!grid[this.i-1][this.j-1].revealed)
         {
-          grid[this.i-1][this.j-1].recreveal();
+          grid[this.i-1][this.j-1].recreveal(rows, cols);
         }
       }
       if(this.i+1<rows && this.j-1<cols && this.i+1>=0 && this.j-1>=0)
       {
         if(!grid[this.i+1][this.j-1].revealed)
         {
-          grid[this.i+1][this.j-1].recreveal();
+          grid[this.i+1][this.j-1].recreveal(rows, cols);
         }
       }
       if(this.i-1<rows && this.j+1<cols && this.i-1>=0 && this.j+1>=0)
       {
         if(!grid[this.i-1][this.j+1].revealed)
        {
-         grid[this.i-1][this.j+1].recreveal();
+         grid[this.i-1][this.j+1].recreveal(rows, cols);
        }
       }
       if(this.j+1<cols)
       {
         if(!grid[this.i][this.j+1].revealed)
         {
-          grid[this.i][this.j+1].recreveal();
+          grid[this.i][this.j+1].recreveal(rows, cols);
         }
       }
       if(this.j-1>=0)
       {
         if(!grid[this.i][this.j-1].revealed)
        {
-        grid[this.i][this.j-1].recreveal();
+        grid[this.i][this.j-1].recreveal(rows, cols);
        }
       }
       if(this.i+1<rows)
       {
         if(!grid[this.i+1][this.j].revealed)
        {
-         grid[this.i+1][this.j].recreveal();
+         grid[this.i+1][this.j].recreveal(rows, cols);
        }
       }
       if(this.i-1>=0)
       {
         if(!grid[this.i-1][this.j].revealed)
         {
-          grid[this.i-1][this.j].recreveal();
+          grid[this.i-1][this.j].recreveal(rows, cols);
         }
       }
           }
@@ -188,7 +161,7 @@ Square.prototype.contains = function(x,y){
   }
 }
 
-Square.prototype.checkNeigbor = function(){
+Square.prototype.checkNeighbor = function(rows, cols){
     let countbombs=0;
 if(this.i+1<rows && this.j+1<cols && this.i+1>=0 && this.j+1>=0)
 {

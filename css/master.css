@@ -6,7 +6,7 @@ body
   weight:400;
   margin:0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 
 .inputForGame

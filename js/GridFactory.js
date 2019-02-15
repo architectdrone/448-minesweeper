@@ -80,9 +80,9 @@ function place_grid(array2D) {
     let html_table = style_table(build_html_table(array2D));
     let div = document.getElementById('msBoard');
     let old_table = document.getElementById('game_board');
-
+    console.log(div);
     if (old_table !== null) {
-        div.removeChild(div.childNodes[0]);
+        div.removeChild(old_table);
     }
     div.appendChild(html_table);
 }
