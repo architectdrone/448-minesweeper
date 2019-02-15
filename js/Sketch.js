@@ -24,7 +24,9 @@
 //        }
 //       return grid;
 //   }
+
 //TODO: Change Square object from function to class, declare function properties within class declaration.
+//TODO: After leftclicking on bomb, cannot flag bomb
 
 function setup(rows, cols, numBombs){
   let grid = Array2DCreator(rows, cols);
@@ -81,7 +83,7 @@ function Square(i, j)
 }
 
 Square.prototype.recreveal = function(grid, rows, cols){
-  if(this.bomb === false || this.key !== 9)
+  if(this.key !== 9 && this.bomb === false)
   {
     this.revealed=true;
     if(this.bombnearby==0)
