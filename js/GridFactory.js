@@ -44,10 +44,12 @@ function build_html_table(grid){
             data.addEventListener('click',  function (){
                 grid[i][j].recreveal(grid, grid.length, grid[i].length);
                 place_grid(grid);
+                checkWinCondition(grid);
             });
             data.addEventListener('contextmenu',  function (){
-                data.flag();
+                grid[i][j].flag();
                 place_grid(grid);
+                checkWinCondition(grid);
             });
 
             row.appendChild(data);
