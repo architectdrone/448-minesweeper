@@ -121,7 +121,7 @@ class Square
       this.oldKey = this.key;
       this.key = 9;
     }
-    else if (this.key === 9){
+    else if (this.revealed === false && this.key === 9){
       this.key = this.oldKey;
     }
   }
