@@ -7,6 +7,7 @@ function Win()
 
   for (let i = 0; i < grid.length; i++){
     for (let j = 0; j < grid[i].length; j++) {
+      // hacky way of making board non-interactive
       grid[i][j].revealed = true;
     }
   }
@@ -24,6 +25,7 @@ function Lose()
           grid[i][j].key = -3;
         }
       }
+      // hacky way of making board non-interactive
       grid[i][j].revealed = true;
     }
   }
