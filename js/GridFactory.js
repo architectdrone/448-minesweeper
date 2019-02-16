@@ -29,7 +29,7 @@ function get_elem_img(value){
 }
 
 function build_html_table(grid){
-    let html_table = document.createElement("table");
+    let html_table = document.createElement('table');
     html_table.setAttribute('id', 'game_board');
 
     for (let i = 0; i < grid.length; i++) {
@@ -38,11 +38,11 @@ function build_html_table(grid){
 
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
-            let img = get_elem_img(grid[i][j].key); //TODO: Change to grid[i][j].key
+            let img = get_elem_img(grid[i][j].key);
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
-                grid[i][j].recreveal();
+                grid[i][j].recReveal();
                 place_grid(grid);
                 checkWinCondition(grid);
             });
