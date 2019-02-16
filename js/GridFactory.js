@@ -67,6 +67,7 @@ function build_html_table(grid){
 
 function style_table(html_table) {
     //style <table>
+    html_table.style.marginTop = "10px";
     html_table.style.tableLayout = "fixed";
     html_table.style.borderCollapse = "collapse";
 
