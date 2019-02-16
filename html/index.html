@@ -7,7 +7,7 @@
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   </head>
-  <body onload="Load()">
+  <body onload="Load()" oncontextmenu="return false">
     <div class="title-bar">
       <img src="../img/minesweeper.png" alt="Minesweeper Image" id="msweeper">
       <span id="titleTag">Minesweeper(c). Made by Miller Bath, Alex Wittman, Adam Wallace, Teddy Kahawj, and Allen Lu.</span>
@@ -41,6 +41,35 @@
 
       <div id="msBoard"></div>
 
+      <button id="WinButton" onclick="Win()">Win</button>
+      <button id="WinButton" onclick="Lose()">Lose</button>
+
+</center>
+
+      <div id="WinScreen">
+        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+          <span id="WinTitle">You Win!</span>
+          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+        </div>
+        <center>
+        <h1>Congratulations!</h1>
+        <h2>Click OK to play a new game.</h2>
+        <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+      </center>
+      </div>
+
+      <div id="LoseScreen">
+        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+          <span id="WinTitle">You Lose.</span>
+          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+        </div>
+        <center>
+        <h1>Good Try!</h1>
+        <h2>Click OK to play a new game.</h2>
+        <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+      </center>
+      </div>
+
       <div class="taskbarDiv">
         <img src="../img/taskbar.png" alt="Taskbar" id="taskbar">
       </div>
@@ -54,4 +83,5 @@
   <script src="../js/TopLevel.js"></script>
   <script src="../js/GridFactory.js"></script>
   <script src="../js/Sketch.js"></script>
+  <script src="../js/GameEndScreen.js"></script>
 </html>
