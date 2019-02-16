@@ -38,36 +38,31 @@
             <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
         </form>
       </div>
-
       <div id="msBoard"></div>
-
-      <button id="WinButton" onclick="Win()">Win</button>
-      <button id="WinButton" onclick="Lose()">Lose</button>
-
-</center>
-
-      <div id="WinScreen">
-        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
-          <span id="WinTitle">You Win!</span>
-          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
-        </div>
-        <center>
-        <h1>Congratulations!</h1>
-        <h2>Click OK to play a new game.</h2>
-        <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
       </center>
-      </div>
 
-      <div id="LoseScreen">
-        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
-          <span id="WinTitle">You Lose.</span>
-          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+        <div id="WinScreen">
+          <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+            <span id="WinTitle">You Win!</span>
+            <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+          </div>
+          <center>
+            <h1>Congratulations!</h1>
+            <h2>Click OK to play a new game.</h2>
+            <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+          </center>
         </div>
-        <center>
-        <h1>Good Try!</h1>
-        <h2>Click OK to play a new game.</h2>
-        <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
-      </center>
+
+        <div id="LoseScreen">
+          <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+            <span id="WinTitle">You Lose.</span>
+            <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+          </div>
+          <center>
+            <h1>Good Try!</h1>
+            <h2>Click OK to play a new game.</h2>
+            <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+          </center>
       </div>
 
       <div class="taskbarDiv">
@@ -77,8 +72,6 @@
       <div class="gorillaDiv">
         <img src="../img/gorilla.gif" alt="Gorilla Image" id="gorilla">
       </div>
-
-  </center>
   </body>
   <script src="../js/TopLevel.js"></script>
   <script src="../js/GridFactory.js"></script>

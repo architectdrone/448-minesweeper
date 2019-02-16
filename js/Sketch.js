@@ -94,7 +94,7 @@ class Square
     else
     {
       //Call lose function because user clicked a bomb.
-      this.revealed = true;
+      Lose();
     }
   }
 
@@ -213,11 +213,11 @@ function IsBomb(PosX, PosY)
 
 function checkWinCondition(grid){
   for (let i = 0; i < grid.length; i++){
-    for (let j = 0; j < grid.length; j++){
-      if (this.bomb === true && this.key !== 9){
+    for (let j = 0; j < grid[i].length; j++){
+      if (grid[i][j].bomb === true && grid[i][j].key !== 9){
         return false;
       }
-      else if (this.bomb === false && (this.key === -1 || this.key === 9)){
+      else if (grid[i][j].bomb === false && (grid[i][j].key === -1 || grid[i][j].key === 9)){
         return false;
       }
     }
