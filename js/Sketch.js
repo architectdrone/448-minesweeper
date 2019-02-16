@@ -64,39 +64,42 @@ class Square
   }
   //Recursively reveals the tiles by checking the contents, then the surrounding tiles.
   recReveal(){
-    if(this.bomb === false)
+    if(this.key !== 9)
     {
-      this.revealed=true;
-
-      //If the tile clicked is blank then recurse.
-      if(this.bombnearby === 0)
+      if(this.bomb === false)
       {
-        //Set the image to the blank image.
-        this.key = 0;
+        this.revealed=true;
 
-        //Checks each of the 8 positions around the tile and reveals the non bombs.
-        this.TopLeft(CheckTile);
-        this.TopMiddle(CheckTile);
-        this.TopRight(CheckTile);
-        this.Left(CheckTile);
-        this.Right(CheckTile);
-        this.BottomLeft(CheckTile);
-        this.BottomMiddle(CheckTile);
-        this.BottomRight(CheckTile);
+        //If the tile clicked is blank then recurse.
+        if(this.bombnearby === 0)
+        {
+          //Set the image to the blank image.
+          this.key = 0;
 
+          //Checks each of the 8 positions around the tile and reveals the non bombs.
+          this.TopLeft(CheckTile);
+          this.TopMiddle(CheckTile);
+          this.TopRight(CheckTile);
+          this.Left(CheckTile);
+          this.Right(CheckTile);
+          this.BottomLeft(CheckTile);
+          this.BottomMiddle(CheckTile);
+          this.BottomRight(CheckTile);
+
+        }
+        else
+        { //Otherwise the tile clicked is a number, so reveal the number.
+          this.revealed = true;
+          this.key = this.bombnearby;
+        }
       }
       else
-      { //Otherwise the tile clicked is a number, so reveal the number.
-        this.revealed = true;
-        this.key = this.bombnearby;
-      }
-    }
-    else
-    {
-      //Call lose function because user clicked a bomb.
-      if (this.key !== 9) {
-        this.key = -2;
-        Lose();
+      {
+        //Call lose function because user clicked a bomb.
+        if (this.key !== 9) {
+          this.key = -2;
+          Lose();
+        }
       }
     }
   }
