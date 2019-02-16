@@ -10,22 +10,29 @@ function maxCheck()
 
 function CreateBoard(NumRows, NumCols, NumBombs)
 {
-    if(NumRows == undefined)
-    {
-      let RowInput = document.getElementById("uGR");
-      NumRows = (RowInput.value == "") ? RowInput.placeholder : RowInput.value;
-    }
-    if(NumCols == undefined)
-    {
-      let ColInput = document.getElementById("uGC");
-      NumCols = (ColInput.value == "") ? ColInput.placeholder : ColInput.value;
-    }
-    if(NumBombs == undefined)
-    {
-      let BombInput = document.getElementById("uB");
-      NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
-    }
-    place_grid(setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs)));
+  let WinScreen = document.getElementById("WinScreen");
+  WinScreen.style.display = "none";
+  let LoseScreen = document.getElementById("LoseScreen");
+  LoseScreen.style.display = "none";
+  let form = document.getElementById("msform");
+  form.style.display = "block";
+
+  if(NumRows == undefined)
+  {
+    let RowInput = document.getElementById("uGR");
+    NumRows = (RowInput.value == "") ? RowInput.placeholder : RowInput.value;
+  }
+  if(NumCols == undefined)
+  {
+    let ColInput = document.getElementById("uGC");
+    NumCols = (ColInput.value == "") ? ColInput.placeholder : ColInput.value;
+  }
+  if(NumBombs == undefined)
+  {
+    let BombInput = document.getElementById("uB");
+    NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
+  }
+  place_grid(setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs)));
 }
 
 
