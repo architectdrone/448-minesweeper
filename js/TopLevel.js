@@ -65,11 +65,5 @@ function Load()
     event.preventDefault();
   });
 
-  CreateBoard(15, 15, 20);
+  CreateBoard(15, 15, 15);
 }
-
-
-//fix positioning on form and header
-//fix position on wizard and ok buttons
-//fix size of ok button/wizard
-//maybe look into other computers compatability with the website displaying stuff

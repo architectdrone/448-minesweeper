@@ -64,11 +64,11 @@ class Square
   }
   //Recursively reveals the tiles by checking the contents, then the surrounding tiles.
   recReveal(){
-    if(this.key !== 9)
+    if(this.key !== 9 && this.revealed === false)
     {
       if(this.bomb === false)
       {
-        this.revealed=true;
+        this.revealed = true;
 
         //If the tile clicked is blank then recurse.
         if(this.bombnearby === 0)
