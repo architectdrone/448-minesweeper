@@ -8,6 +8,20 @@ function Win()
 
 function Lose()
 {
+  for (let i = 0; i < grid.length; i++){
+    for (let j = 0; j < grid[i].length; j++){
+      if (grid[i][j].bomb === true){
+        if (grid[i][j].key === 9)
+          grid[i][j].key = -4;
+
+        else if (grid[i][j].key !== -2){
+          grid[i][j].key = -3;
+        }
+      }
+    }
+  }
+
+  place_grid(grid);
   let LosePopup = document.getElementById("LoseScreen");
   LosePopup.style.display = "block";
   let form = document.getElementById("msform");

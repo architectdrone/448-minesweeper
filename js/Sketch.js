@@ -94,6 +94,7 @@ class Square
     else
     {
       //Call lose function because user clicked a bomb.
+      this.key = -2;
       Lose();
     }
   }

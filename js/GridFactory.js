@@ -1,6 +1,9 @@
 class Key {
     constructor() {
         this.key_list = {
+            '-4': create_image_element('../img/flagged_bomb.png'),
+            '-3': create_image_element('../img/bomb.png'),
+            '-2': create_image_element('../img/exploded.png'),
             '-1': create_image_element('../img/square.png'),
             '0' : create_image_element('../img/empty.png'),
             '1' : create_image_element('../img/number-1.png'),
