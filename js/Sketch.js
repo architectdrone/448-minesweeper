@@ -1,5 +1,13 @@
-/** Global grid variable for storing 2D Array used by most functions in project. */
+/**
+ * Global grid variable for storing 2D Array used by most functions in project.
+ * @type {Square[]}
+ */
 let grid;
+
+/**
+ * Global flag variable for storing the number of flags the user has left.
+ * @type {int}
+ */
 let NumFlags = 0;
 
 /**
@@ -87,7 +95,8 @@ class Square
     this.revealed = false;
     this.key = -1;
   }
-  //Recursively reveals the tiles by checking the contents, then the surrounding tiles.
+
+
   recReveal(){
     if(this.key !== 9 && this.revealed === false)
     {
@@ -145,6 +154,10 @@ class Square
     this.bombnearby += this.BottomRight(IsBomb);
   }
 
+  /**
+   * Places a flag if the square is not revealed and if the user still has flags.
+   * @return - nothing
+   */
   flag(){
     if (this.revealed === false && this.key !== 9 && NumFlags > 0) {
       this.oldKey = this.key;
@@ -157,61 +170,113 @@ class Square
     }
   }
 
-  //Checks the tile up and to the left of the given tile.
+  /**
+   * Checks the tile up and to the left of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   TopLeft(func)
   {
     return func(this.i - 1, this.j - 1);
   }
 
-  //Checks the tile directly above the given tile.
+  /**
+   * Checks the tile directly above the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   TopMiddle(func)
   {
     return func(this.i, this.j - 1);
   }
 
-  //Checks the tile up and to the right of the given tile.
+  /**
+   * Checks the tile up and to the right of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   TopRight(func)
   {
     return func(this.i + 1, this.j - 1);
   }
 
-  //Checks the tile directly to the left of the given tile.
+  /**
+   * Checks the tile directly to the left of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   Left(func)
   {
     return func(this.i - 1, this.j);
   }
 
-  //Checks the tile directly to the right of the given tile.
+  /**
+   * Checks the tile directly to the right of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   Right(func)
   {
     return func(this.i + 1, this.j);
   }
 
-  //Checks the tile down and to the left of the given tile.
+  /**
+   * Checks the tile down and to the left of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   BottomLeft(func) {
     return func(this.i - 1, this.j + 1);
   }
 
-  //Checks the tile directly below the given tile.
+  /**
+   * Checks the tile directly below the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   BottomMiddle(func)
   {
     return func(this.i, this.j + 1);
   }
 
-  //Checks the tile down and to the right of the given tile.
+  /**
+   * Checks the tile down and to the right of the given tile.
+   * @param {function} func - Will either be the IsBomb function or CheckTile function.
+   * @returns {int} - If the IsBomb function is passed then it will return an int.
+   *                - If the CheckTile function is passed it will return undefined.
+   */
   BottomRight(func)
   {
     return func(this.i + 1, this.j + 1);
   }
 }
 
-//Returns true if the given position is within the board's bounds.
+/**
+ * Returns true if the given position is within the board's bounds.
+ * @param       {int} PosX - The position on the board in the horizontal direction
+ * @param       {int} PosY - The position on the board in the vertical direction.
+ * @function
+ * @returns - nothing
+ */
 function IsWithinBoard(PosX, PosY)
 {
   return (PosX < grid.length) && (PosY < grid[0].length) && (PosX >= 0 && PosY >= 0);
 }
 
-//Reveals the tile at the given position and recursively calls the tiles around it.
+/**
+ * Reveals the tile at the given position and recursively calls the tiles around it.
+ * @param       {int} PosX - The position on the board in the horizontal direction
+ * @param       {int} PosY - The position on the board in the vertical direction.
+ * @constructor
+ * @returns - nothing
+ */
 function RevealTile(PosX, PosY)
 {
   if(!grid[PosX][PosY].revealed)
@@ -220,7 +285,13 @@ function RevealTile(PosX, PosY)
   }
 }
 
-//Checks if a position is within the board's bounds, then reveals that tile.
+/**
+ * Checks if a position is within the board's bounds, then reveals that tile.
+ * @param       {int} PosX - The position on the board in the horizontal direction
+ * @param       {int} PosY - The position on the board in the vertical direction.
+ * @constructor
+ * @returns - nothing
+ */
 function CheckTile(PosX, PosY)
 {
   if(IsWithinBoard(PosX, PosY))
@@ -229,6 +300,15 @@ function CheckTile(PosX, PosY)
   }
 }
 
+/**
+ * Checks if a position is within the board and if it is a bomb.
+ * @param       {int} PosX - The position on the board in the horizontal direction
+ * @param       {int} PosY - The position on the board in the vertical direction.
+ * @constructor
+ * @returns - 1 if the position is within the board and is a bomb,
+ *            0 if the position is within the board and is not a bomb,
+ *            0 if the position is not within the board.
+ */
 function IsBomb(PosX, PosY)
 {
   if(IsWithinBoard(PosX, PosY))
