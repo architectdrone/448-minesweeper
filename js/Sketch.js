@@ -2,6 +2,12 @@
 let grid;
 let NumFlags = 0;
 
+/**
+ * The setup function perform the job of taking user input size of the board and bombs, then create a 2D array with Square objects. It will also randomly place the bombs in different squares. After all the bombs are placed, all the squares will have a record of how many bombs are nearby it out of the near eight spots.
+ * @param rows, cols, input size of 2D array board.
+ * @param numBombs number of bombs needed to be placed in the Square objects randomly.
+ * @returns return the 2d array with all the properties initialized.
+ */
 function setup(rows, cols, numBombs)
 {
   NumFlags = numBombs;
@@ -17,6 +23,14 @@ function setup(rows, cols, numBombs)
   }
   return grid;
 }
+
+
+
+/**
+ * utilizes a randomized algorithm to place board with random bomb cordinates.
+ * @param 2D Array and integer number of bombs
+ * @returns NULL
+ */
 
 
 function PlaceBombs(grid, numBombs)
@@ -57,7 +71,11 @@ function Array2DCreator(row, col)
   return(array2D);
 }
 
-
+/**
+ * A Square class which has all the properties of a square object needs.
+ * @param i,j coordinate of the Square object in the 2D array.
+ * @returns Null
+ */
 class Square
 {
   constructor(i, j)
@@ -111,7 +129,11 @@ class Square
     }
   }
 
-  //Calculates the values around the bombs to display.
+    /**
+     * CheckNeighbor does the job of counting how many bombs are nearby a Square object out of the eight nearby square.
+     * @param No Parameter
+     * @returns NULL
+     */
   checkNeighbor(){
     this.bombnearby += this.TopLeft(IsBomb);
     this.bombnearby += this.TopMiddle(IsBomb);
