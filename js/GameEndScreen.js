@@ -1,3 +1,4 @@
+/** Changes WinPopup display to 'block', sets all Square.revealed to true in grid, hides form elements. */
 function Win()
 {
   let WinPopup = document.getElementById("WinScreen");
@@ -7,12 +8,12 @@ function Win()
 
   for (let i = 0; i < grid.length; i++){
     for (let j = 0; j < grid[i].length; j++) {
-      // hacky way of making board non-interactive
       grid[i][j].revealed = true;
     }
   }
 }
 
+/** Changes LosePopup display to 'block', sets all Square.revealed to true in grid, hides form elements. */
 function Lose()
 {
   for (let i = 0; i < grid.length; i++){
@@ -25,7 +26,6 @@ function Lose()
           grid[i][j].key = -3;
         }
       }
-      // hacky way of making board non-interactive
       grid[i][j].revealed = true;
     }
   }

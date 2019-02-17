@@ -1,4 +1,6 @@
+/** Class providing list of keys and their corresponding images. */
 class Key {
+    /** Assign images to each key. */
     constructor() {
         this.key_list = {
             '-4': create_image_element('../img/flagged_bomb.png'),
@@ -19,6 +21,11 @@ class Key {
     }
 }
 
+/**
+ * Create HTML <img> element with src=path
+ * @param {string} path - Path to image
+ * @returns {HTMLElement} elem_img - HTML <img> element
+ */
 function create_image_element(path){
     let elem_img = document.createElement('img');
     elem_img.setAttribute('src', path);
@@ -26,11 +33,20 @@ function create_image_element(path){
     return elem_img;
 }
 
+/**
+ * Returns image from Key class corresponding to value.
+ * @param {Integer} value - Key to find image for
+ */
 function get_elem_img(value){
     let key = new Key();
     return key.key_list[value.toString()];
 }
 
+/**
+ * Builds HTML Table populates with HTML Images according to Square.key.
+ * @param {Array} grid - 2D Array containing Square objects
+ * @returns {HTMLElement} HTML Table with images corresponding with Square.key
+ */
 function build_html_table(grid){
     let html_table = document.createElement('table');
     html_table.setAttribute('id', 'game_board');
@@ -65,6 +81,11 @@ function build_html_table(grid){
     return html_table;
 }
 
+/**
+ * Applies CSS styling to HTML Table and its child nodes.
+ * @param {HTMLElement} html_table - HTML Table to be styled
+ * @returns {HTMLElement} - Styled HTML Table
+ */
 function style_table(html_table) {
     //style <table>
     html_table.style.margin = "10px";
@@ -86,6 +107,10 @@ function style_table(html_table) {
     return html_table;
 }
 
+/**
+ * Generates and appends HTML Table to HTML Element with id='msBoard', removes old HTML Table.
+ * @param {Array} array2D - 2D Array of Square elements to generate HTML Table from
+ */
 function place_grid(array2D) {
     let html_table = style_table(build_html_table(array2D));
     let div = document.getElementById('msBoard');

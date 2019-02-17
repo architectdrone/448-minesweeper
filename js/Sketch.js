@@ -1,4 +1,4 @@
-//Global grid variable for storing 2Darray used by most functions in project
+/** Global grid variable for storing 2D Array used by most functions in project. */
 let grid;
 
 function setup(rows, cols, numBombs)
@@ -34,7 +34,12 @@ function PlaceBombs(grid, numBombs)
   }
 }
 
-
+/**
+ * Creates 2D Array populated with Square objects.
+ * @param {Integer} row - # of rows
+ * @param {Integer} col - # of columns
+ * @returns {Square[]} array2D - 2D Array of Square objects
+ */
 function Array2DCreator(row, col)
 {
   let array2D = new Array(row);
@@ -217,6 +222,11 @@ function IsBomb(PosX, PosY)
   }
 }
 
+/**
+ * Check grid state for win condition.
+ * @param {Square[]} grid - 2D Array of Square objects
+ * @returns {boolean}
+ */
 function checkWinCondition(grid){
   for (let i = 0; i < grid.length; i++){
     for (let j = 0; j < grid[i].length; j++){
