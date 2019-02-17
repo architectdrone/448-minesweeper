@@ -1,8 +1,10 @@
 /** Global grid variable for storing 2D Array used by most functions in project. */
 let grid;
+let NumFlags = 0;
 
 function setup(rows, cols, numBombs)
 {
+  NumFlags = numBombs;
   grid = Array2DCreator(rows, cols);
   PlaceBombs(grid, numBombs);
 
@@ -122,12 +124,14 @@ class Square
   }
 
   flag(){
-    if (this.revealed === false && this.key !== 9) {
+    if (this.revealed === false && this.key !== 9 && NumFlags > 0) {
       this.oldKey = this.key;
       this.key = 9;
+      NumFlags--;
     }
     else if (this.revealed === false && this.key === 9){
       this.key = this.oldKey;
+      NumFlags++;
     }
   }
 
