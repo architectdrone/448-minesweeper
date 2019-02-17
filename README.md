@@ -17,3 +17,7 @@ All images sourced from 'openclipart' at https://openclipart.org/:
     flag.png: https://openclipart.org/detail/255282/racing-flag-red
 
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
+
+Launch program:
+ 1) Open html/index.html
+ 
