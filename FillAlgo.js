@@ -1,7 +1,7 @@
 
 
 
-/*
+/**
  * This function allows for the creation of a two dimensional Array
  * @param integer value for row and col dimensions
  * @returns A two dimensional array.
@@ -17,7 +17,7 @@ function Array2DCreator(col, row) {
 }
 
 
-/*
+/**
  * This function allows for the creation of a two dimensional Array
  * @param integer value for row and col dimensions.
  * @returns A two dimensional array.
@@ -33,16 +33,14 @@ function build_grid(row, col) {
     return array2D;
 }
 
-/*
 
- */
-/*
+/**
  * Function simply takes the row and col parameter and calls
 array creator function to intialize a 2d array. After doing so,
 bomb placement will be randomized and empty/marked spots will be visible within
 user array.
  * @param integer for row, col dimensions, and bomb number.
- * @returns returns a two dimensional board filled with bomb locations and empty spots marked. 
+ * @returns returns a two dimensional board filled with bomb locations and empty spots marked.
  */
 function return_2DBoard(row,col,bombNum)
 {
