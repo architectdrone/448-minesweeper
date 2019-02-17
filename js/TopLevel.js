@@ -1,3 +1,8 @@
+/**
+ * Sets the max number of bombs for the input element.
+ * @function
+ * @returns nothing
+ */
 function maxCheck()
 {
   let RowInput = document.getElementById("uGR");
@@ -7,6 +12,11 @@ function maxCheck()
   BombInput.max = ((RowInput.value*ColInput.value)-1);
 }
 
+/**
+ * Checks the values of the inputs of the html form.
+ * @function
+ * @returns - true if the inputs are valid, false if the inputs are invalid.
+ */
 function GoodInputs()
 {
   let RowInput = document.getElementById("uGR");
@@ -26,6 +36,14 @@ function GoodInputs()
   }
 }
 
+/**
+ * Hides win or lose screens and calls the function to create a new gid.
+ * @param       {string} NumRows  - Number of rows the board will have.
+ * @param       {string} NumCols  - Number of columns the board will have.
+ * @param       {string} NumBombs - Number of bombs the board will have.
+ * @function
+ * @returns - nothing
+ */
 function CreateBoard(NumRows, NumCols, NumBombs)
 {
   if(GoodInputs())
@@ -56,7 +74,11 @@ function CreateBoard(NumRows, NumCols, NumBombs)
   }
 }
 
-
+/**
+ * Called on page load. Disables the page to reload when form is submitted, and creates an initial board.
+ * @function
+ * @returns - nothing
+ */
 function Load()
 {
   //gives javascript the reins for not letting page reload
