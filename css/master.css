@@ -1,4 +1,4 @@
-body
+body /*General formatting */
 {
   background-color: #d3d3cc;
   font-family: 'VT323','Comic Sans MS';
@@ -9,40 +9,35 @@ body
   /*overflow-y: hidden;*/
 }
 
-.inputForGame
+.inputForGame /*Formatting for the input boxes*/
 {
   display:table
 }
 
-#inputP
+#inputP /*Formatting for the input boxes*/
 {
  display: table-row;
 }
 
-.inputLabel
+.inputLabel /*Formatting for the input boxes*/
 {
   display: table-cell;
 
 }
 
-.header
+.header /*Title text and short description for website.*/
 {
   position:relative;
   margin:auto;
 }
 
-#subtitle
+#subtitle /*Underneath header*/
 {
   position:relative;
   bottom:0.938em;
 }
 
-#uB
-{
-  resize:none;
-}
-
-.title-bar
+.title-bar /*Gradient for the windows 2000 style title bar.*/
 {
   width:100%;
   height:21px;
@@ -55,7 +50,7 @@ body
   background-color:black;
 }
 
-#CreateButton
+#CreateButton /*Design and formatting for the OK button*/
 {
   position:relative;
   left:5px;
@@ -65,7 +60,7 @@ body
   background-size:6.250em 1.75em;
 }
 
-#WinScreen
+#WinScreen /*Design and formatting for the win screen*/
 {
   display: inline-block;
   width: 25em;
@@ -77,7 +72,7 @@ body
   margin: 0 auto;
 }
 
-#LoseScreen
+#LoseScreen /*Design and formatting for the lose screen*/
 {
   display: inline-block;
   width: 25em;
@@ -89,7 +84,7 @@ body
   margin: 0 auto;
 }
 
-#WinTitle
+#WinTitle /*Design and formatting for the win title*/
 {
   display: inline-block;
   color: #FFFF;
@@ -99,7 +94,7 @@ body
   padding-left: 5px;
 }
 
-#msweeper
+#msweeper /*Minesweeper image*/
 {
   float:left;
   left:0.125em;
@@ -108,22 +103,22 @@ body
   width:1.125em;
 }
 
-#titleTag
+#titleTag /*Text formatting for the 'application' title bar text*/
 {
   color:#FFFF;
   font-size:12px;
   position:relative;
-  bottom:0.219em;
+  bottom:0.119em;
 }
 
-.gorillaDiv
+.gorillaDiv /*Purple gorilla helper*/
 {
   position:fixed;
   bottom:1.9em;
   right:2.2em;
 }
 
-#gorilla
+#gorilla /*Positioning within the gorilla div*/
 {
   position:relative;
   float:right;
@@ -131,7 +126,7 @@ body
   height:6.188em;
 }
 
-.taskbarDiv
+.taskbarDiv /*Bottom taskbar formatting*/
 {
   position:fixed;
   bottom:0;
@@ -140,18 +135,18 @@ body
 
 }
 
-#taskbar
+#taskbar /*Bottom taskbar formatting*/
 {
   width:100%;
 }
 
-#wizardCreate
+#wizardCreate /*Wizard icon next to OK button*/
 {
   height:1.250em;
   width:1.250em;
 }
 
-#buttons
+#buttons /*Min, max, close buttons on top right of page*/
 {
   position:relative;
   top:0.231em;
@@ -161,16 +156,11 @@ body
   float:right;
 }
 
-#uGR, #uGC, #uB
+#uGR, #uGC, #uB /*Grouping all the input boxes together for a particular stlye*/
 {
   border-style:inset;
   border-width:3px;
   min-width:150px;
   width:150px;
-
-}
-
-.formDiv
-{
 
 }
