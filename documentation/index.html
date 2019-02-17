@@ -1,0 +1,2619 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#win'
+                  class="">
+                  Win
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#lose'
+                  class="">
+                  Lose
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#key'
+                  class="">
+                  Key
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#create_image_element'
+                  class="">
+                  create_image_element
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#get_elem_img'
+                  class="">
+                  get_elem_img
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#build_html_table'
+                  class="">
+                  build_html_table
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#style_table'
+                  class="">
+                  style_table
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#place_grid'
+                  class="">
+                  place_grid
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#grid'
+                  class="">
+                  grid
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numflags'
+                  class="">
+                  NumFlags
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setup'
+                  class="">
+                  setup
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#placebombs'
+                  class="">
+                  PlaceBombs
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#array2dcreator'
+                  class="">
+                  Array2DCreator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#square'
+                  class=" toggle-sibling">
+                  Square
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#squarecheckneighbor'
+                        class='regular pre-open'>
+                        #checkNeighbor
+                      </a></li>
+                      
+                      <li><a
+                        href='#squareflag'
+                        class='regular pre-open'>
+                        #flag
+                      </a></li>
+                      
+                      <li><a
+                        href='#squaretopleft'
+                        class='regular pre-open'>
+                        #TopLeft
+                      </a></li>
+                      
+                      <li><a
+                        href='#squaretopmiddle'
+                        class='regular pre-open'>
+                        #TopMiddle
+                      </a></li>
+                      
+                      <li><a
+                        href='#squaretopright'
+                        class='regular pre-open'>
+                        #TopRight
+                      </a></li>
+                      
+                      <li><a
+                        href='#squareleft'
+                        class='regular pre-open'>
+                        #Left
+                      </a></li>
+                      
+                      <li><a
+                        href='#squareright'
+                        class='regular pre-open'>
+                        #Right
+                      </a></li>
+                      
+                      <li><a
+                        href='#squarebottomleft'
+                        class='regular pre-open'>
+                        #BottomLeft
+                      </a></li>
+                      
+                      <li><a
+                        href='#squarebottommiddle'
+                        class='regular pre-open'>
+                        #BottomMiddle
+                      </a></li>
+                      
+                      <li><a
+                        href='#squarebottomright'
+                        class='regular pre-open'>
+                        #BottomRight
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iswithinboard'
+                  class="">
+                  IsWithinBoard
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#revealtile'
+                  class="">
+                  RevealTile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checktile'
+                  class="">
+                  CheckTile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isbomb'
+                  class="">
+                  IsBomb
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkwincondition'
+                  class="">
+                  checkWinCondition
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#maxcheck'
+                  class="">
+                  maxCheck
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#goodinputs'
+                  class="">
+                  GoodInputs
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createboard'
+                  class="">
+                  CreateBoard
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#load'
+                  class="">
+                  Load
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='win'>
+      Win
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Changes WinPopup display to 'block', sets all Square.revealed to true in grid, hides form elements.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>Win(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='lose'>
+      Lose
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Changes LosePopup display to 'block', sets all Square.revealed to true in grid, hides form elements.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>Lose(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='key'>
+      Key
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Class providing list of keys and their corresponding images.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new Key()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='create_image_element'>
+      create_image_element
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create HTML <img> element with src=path</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>create_image_element(path: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>path</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Path to image
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
+        elem_img - HTML 
+<img>
+ element
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='get_elem_img'>
+      get_elem_img
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns image from Key class corresponding to value.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>get_elem_img(value: Integer)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(Integer)</code>
+	    Key to find image for
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='build_html_table'>
+      build_html_table
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Builds HTML Table populates with HTML Images according to Square.key.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>build_html_table(grid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>grid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    2D Array containing Square objects
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
+        HTML Table with images corresponding with Square.key
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='style_table'>
+      style_table
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Applies CSS styling to HTML Table and its child nodes.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>style_table(html_table: <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>): <a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>html_table</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a>)</code>
+	    HTML Table to be styled
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/HTML/Element">HTMLElement</a></code>:
+        Styled HTML Table
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='place_grid'>
+      place_grid
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates and appends HTML Table to HTML Element with id='msBoard', removes old HTML Table.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>place_grid(array2D: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array2D</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    2D Array of Square elements to generate HTML Table from
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='grid'>
+      grid
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Global grid variable for storing 2D Array used by most functions in project.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>grid</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#square">Square</a>>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numflags'>
+      NumFlags
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Global flag variable for storing the number of flags the user has left.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>NumFlags</div>
+   
+  
+    <p>
+      Type:
+      int
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setup'>
+      setup
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The setup function perform the job of taking user input size of the board and bombs, then create a 2D array with Square objects. It will also randomly place the bombs in different squares. After all the bombs are placed, all the squares will have a record of how many bombs are nearby it out of the near eight spots.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>setup(rows: any, cols: any, numBombs: any): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>rows</span> <code class='quiet'>(any)</code>
+	    , cols, input size of 2D array board.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cols</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numBombs</span> <code class='quiet'>(any)</code>
+	    number of bombs needed to be placed in the Square objects randomly.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        return the 2d array with all the properties initialized.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='placebombs'>
+      PlaceBombs
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>utilizes a randomized algorithm to place board with random bomb cordinates.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new PlaceBombs(grid: any, numBombs: any, 2D: any): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>grid</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numBombs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>2D</span> <code class='quiet'>(any)</code>
+	    Array and integer number of bombs
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        NULL
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='array2dcreator'>
+      Array2DCreator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates 2D Array populated with Square objects.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new Array2DCreator(row: Integer, col: Integer): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#square">Square</a>></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>row</span> <code class='quiet'>(Integer)</code>
+	    <h1>of rows</h1>
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>col</span> <code class='quiet'>(Integer)</code>
+	    <h1>of columns</h1>
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#square">Square</a>></code>:
+        array2D - 2D Array of Square objects
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='square'>
+      Square
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A Square class which has all the properties of a square object needs.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new Square(i: any, j: any): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>i</span> <code class='quiet'>(any)</code>
+	    ,j coordinate of the Square object in the 2D array.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>j</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        Null
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='squarecheckneighbor'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>checkNeighbor(No)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>CheckNeighbor does the job of counting how many bombs are nearby a Square object out of the eight nearby square.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkNeighbor(No: any): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>No</span> <code class='quiet'>(any)</code>
+	    Parameter
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        NULL
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squareflag'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>flag()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Places a flag if the square is not revealed and if the user still has flags.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>flag(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squaretopleft'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>TopLeft(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile up and to the left of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>TopLeft(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squaretopmiddle'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>TopMiddle(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile directly above the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>TopMiddle(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squaretopright'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>TopRight(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile up and to the right of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>TopRight(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squareleft'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>Left(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile directly to the left of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>Left(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squareright'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>Right(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile directly to the right of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>Right(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squarebottomleft'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>BottomLeft(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile down and to the left of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>BottomLeft(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squarebottommiddle'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>BottomMiddle(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile directly below the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>BottomMiddle(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='squarebottomright'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>BottomRight(func)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Checks the tile down and to the right of the given tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>BottomRight(func: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>func</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a>)</code>
+	    Will either be the IsBomb function or CheckTile function.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        If the IsBomb function is passed then it will return an int.
+- If the CheckTile function is passed it will return undefined.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iswithinboard'>
+      IsWithinBoard
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true if the given position is within the board's bounds.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>IsWithinBoard(PosX: int, PosY: int): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosX</span> <code class='quiet'>(int)</code>
+	    The position on the board in the horizontal direction
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosY</span> <code class='quiet'>(int)</code>
+	    The position on the board in the vertical direction.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='revealtile'>
+      RevealTile
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Reveals the tile at the given position and recursively calls the tiles around it.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new RevealTile(PosX: int, PosY: int): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosX</span> <code class='quiet'>(int)</code>
+	    The position on the board in the horizontal direction
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosY</span> <code class='quiet'>(int)</code>
+	    The position on the board in the vertical direction.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checktile'>
+      CheckTile
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if a position is within the board's bounds, then reveals that tile.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new CheckTile(PosX: int, PosY: int): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosX</span> <code class='quiet'>(int)</code>
+	    The position on the board in the horizontal direction
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosY</span> <code class='quiet'>(int)</code>
+	    The position on the board in the vertical direction.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isbomb'>
+      IsBomb
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if a position is within the board and if it is a bomb.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new IsBomb(PosX: int, PosY: int): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosX</span> <code class='quiet'>(int)</code>
+	    The position on the board in the horizontal direction
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>PosY</span> <code class='quiet'>(int)</code>
+	    The position on the board in the vertical direction.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        1 if the position is within the board and is a bomb,
+0 if the position is within the board and is not a bomb,
+0 if the position is not within the board.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkwincondition'>
+      checkWinCondition
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check grid state for win condition.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkWinCondition(grid: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#square">Square</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>grid</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#square">Square</a>>)</code>
+	    2D Array of Square objects
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='maxcheck'>
+      maxCheck
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sets the max number of bombs for the input element.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>maxCheck(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='goodinputs'>
+      GoodInputs
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks the values of the inputs of the html form.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>GoodInputs(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        true if the inputs are valid, false if the inputs are invalid.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createboard'>
+      CreateBoard
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Hides win or lose screens and calls the function to create a new gid.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>CreateBoard(NumRows: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, NumCols: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, NumBombs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>NumRows</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Number of rows the board will have.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>NumCols</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Number of columns the board will have.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>NumBombs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Number of bombs the board will have.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='load'>
+      Load
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Called on page load. Disables the page to reload when form is submitted, and creates an initial board.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>Load(): any</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        nothing
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
