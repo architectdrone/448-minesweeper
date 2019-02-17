@@ -1,4 +1,8 @@
-/** Changes WinPopup display to 'block', sets all Square.revealed to true in grid, hides form elements. */
+/**
+ * Changes WinPopup display to 'block', sets all Square.revealed to true in grid, hides form elements.
+ * @function
+ * @returns - nothing
+ */
 function Win()
 {
   let WinPopup = document.getElementById("WinScreen");
@@ -13,7 +17,11 @@ function Win()
   }
 }
 
-/** Changes LosePopup display to 'block', sets all Square.revealed to true in grid, hides form elements. */
+/**
+ * Changes LosePopup display to 'block', sets all Square.revealed to true in grid, hides form elements.
+ * @function
+ * @returns - nothing
+ */
 function Lose()
 {
   for (let i = 0; i < grid.length; i++){
