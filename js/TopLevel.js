@@ -16,7 +16,7 @@ function GoodInputs()
   let NumCols = (ColInput.value == "") ? ColInput.placeholder : ColInput.value;
   let NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
 
-  if(NumRows >= 2 && NumCols >= 2 && NumBombs >= 1 && NumBombs <= NumRows * NumCols - 1)
+  if(NumRows >= 2 && NumRows <= 25 && NumCols >= 2 && NumCols <= 25 && NumBombs >= 1 && NumBombs <= NumRows * NumCols - 1)
   {
     return true;
   }
