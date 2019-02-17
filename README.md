@@ -15,3 +15,5 @@ All images sourced from 'openclipart' at https://openclipart.org/:
     number-7.png: https://openclipart.org/detail/203543/glossy-number-seven
     number-8.png: https://openclipart.org/detail/203544/glossy-number-eight
     flag.png: https://openclipart.org/detail/255282/racing-flag-red
+
+Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
