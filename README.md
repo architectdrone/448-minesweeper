@@ -18,6 +18,10 @@ All images sourced from 'openclipart' at https://openclipart.org/:
 
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
 
-Launch program:
- 1) Open html/index.html
- 
+How to run:
+
+    Option 1:
+        1) Download and extract all files.
+        2) Open html/index.html in a web browser.
+    Option 2:
+        1) Go to https://people.eecs.ku.edu/~a624w517/Minesweeper/html/
