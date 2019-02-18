@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+  <!--Text and icon for the tab.-->
   <head>
     <meta charset="utf-8">
     <title>Meet the Forkers</title>
@@ -7,66 +9,85 @@
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   </head>
+
+  <!--Calls the Load() function and disables the right click menu from appearing-->
   <body onload="Load()" oncontextmenu="return false">
-    <div class="title-bar"> <!--Title bar-->
+
+    <!--Title bar-->
+    <div class="title-bar">
       <img src="../img/minesweeper.png" alt="Minesweeper Image" id="msweeper">
       <span id="titleTag">Minesweeper(c). Made by Miller Bath, Alex Wittman, Adam Wallace, Teddy Kahwaji, and BoHui Lu.</span>
       <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
     </div>
 
     <center>
-      <div class="header"> <!--Header bar-->
+
+      <!--Header bar-->
+      <div class="header">
         <h2>EECS 448's own Forkers.</h2>
         <h5 id="subtitle">This page was made to host our minesweeper game.</h5>
       </div>
 
-      <div class="header" class="userInput"> <!--Contains all user input section-->
+      <!--Contains all user input section-->
+      <div class="header" class="userInput">
         <form autocomplete="on" name="form" id="msform">
+
+          <!--Input for the number of rows-->
           <p id="inputP">
             <label class="inputLabel" id="gameRow">Number of <u>r</u>ows:</label>
             <input class="inputLabel" id="uGR" type="number" name="gameRow" placeholder="15" min="2" max="25" required>
           </p>
+
+          <!--Input for the number of columns-->
           <p id="inputP">
             <label class="inputLabel" id="gameColumn">Number of <u>c</u>olumns:</label>
             <input class="inputLabel" id="uGC" type="number" name="gameColumn" placeholder="15" min="2" max="25" required>
           </p>
+
+          <!--Input for the number of bombs-->
           <p id="inputP">
             <label class="inputLabel" id="gameBomb">Number of <u>b</u>ombs:</label>
             <input class="inputLabel" id="uB" oninput="maxCheck()" type="number" name="gameBomb" placeholder="15" min="1" max="" width="600" required style="resize:none;">
           </p>
-            <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
-            <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+
+          <!--Submit button to send the form values-->
+          <img src="../img/wizard.png" alt="Wizard" id="wizardCreate">
+          <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
         </form>
       </div>
+
+      <!--This is where the game board is placed when it is created-->
       <div id="msBoard"></div>
       </center>
 
-        <div id="WinScreen">
-          <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
-            <span id="WinTitle">You Win!</span>
-            <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
-          </div>
-          <center>
-            <h1>Congratulations!</h1>
-            <h2>Click OK to play a new game.</h2>
-            <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
-          </center>
+      <!--This div tells the user they won and allows them to play another game-->
+      <div id="WinScreen">
+        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+          <span id="WinTitle">You Win!</span>
+          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
         </div>
+        <center>
+          <h1>Congratulations!</h1>
+          <h2>Click OK to play a new game.</h2>
+          <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+        </center>
+      </div>
 
-        <div id="LoseScreen">
-          <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
-            <span id="WinTitle">You Lose.</span>
-            <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
-          </div>
-          <center>
-            <h1>Good Try!</h1>
-            <h2>Click OK to play a new game.</h2>
-            <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
-          </center>
+      <!--This div tells the user they lost and allows them to play another game-->
+      <div id="LoseScreen">
+        <div class="title-bar" style="width: 99%; margin-top: 5px; display: block; margin: 0 auto;">
+          <span id="WinTitle">You Lose.</span>
+          <img src="../img/3_blind_mice.png" alt="3 Buttons Win 2000" id="buttons">
+        </div>
+        <center>
+          <h1>Good Try!</h1>
+          <h2>Click OK to play a new game.</h2>
+          <button type="submit" id="CreateButton" onclick="CreateBoard()" name="submission"></button>
+        </center>
       </div>
 
 
-    <!--Buttom images-->
+    <!--Bottom images-->
       <div class="taskbarDiv">
         <img src="../img/taskbar.png" alt="Taskbar" id="taskbar">
       </div>
@@ -75,6 +96,8 @@
         <img src="../img/gorilla.gif" alt="Gorilla Image" id="gorilla">
       </div>
   </body>
+
+  <!--JavaScript functions included on the page-->
   <script src="../js/TopLevel.js"></script>
   <script src="../js/GridFactory.js"></script>
   <script src="../js/Sketch.js"></script>
