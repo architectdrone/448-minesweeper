@@ -120,3 +120,34 @@ function place_grid(array2D) {
     }
     div.appendChild(html_table);
 }
+
+/**
+ * Generates and appends HTML Table to HTML Element with id='cheatBoard'.
+ * @param {Array} array2D - 2D Array of Square elements to generate HTML Table from
+ */
+function place_grid_cheat(array2D) {
+    let html_table = style_table(build_html_table_cheat(array2D));
+    let div = document.getElementById('cheatBoard');
+    div.appendChild(html_table);
+}
+
+/**
+ * Builds HTML Table populates with HTML Images according to Square.key. For cheat mode
+ * @param {Array} grid - 2D Array containing Square objects
+ * @returns {HTMLElement} HTML Table with images corresponding with Square.key
+ */
+function build_html_table_cheat(grid){
+    let html_table = document.createElement('table');
+    html_table.setAttribute('id', 'game_board');
+    for (let i = 0; i < grid.length; i++) {
+        let row = document.createElement('tr');
+        html_table.appendChild(row);
+        for (let j = 0; j < grid[i].length; j++) {
+            let data = document.createElement('td');
+            let img = get_elem_img(grid[i][j].key);
+            data.appendChild(img);
+            row.appendChild(data);
+        }
+    }
+    return html_table;
+}
