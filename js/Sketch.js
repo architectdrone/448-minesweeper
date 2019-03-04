@@ -18,7 +18,7 @@ let NumFlags = 0;
  */
 function setup(rows, cols, numBombs)
 {
-  NumFlags = numBombs;
+  NumFlags = 9999;
   grid = Array2DCreator(rows, cols);
   PlaceBombs(grid, numBombs);
 
@@ -336,10 +336,7 @@ function IsBomb(PosX, PosY)
 function checkWinCondition(grid){
   for (let i = 0; i < grid.length; i++){
     for (let j = 0; j < grid[i].length; j++){
-      if (grid[i][j].bomb === true && grid[i][j].key !== 9){
-        return false;
-      }
-      else if (grid[i][j].bomb === false && (grid[i][j].key === -1 || grid[i][j].key === 9)){
+      if (grid[i][j].bomb === false && grid[i][j].key === -1){
         return false;
       }
     }
