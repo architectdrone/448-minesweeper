@@ -18,3 +18,6 @@ function enableCheatMode()
 }
 
 function disableCheatMode()
+{
+    
+}
