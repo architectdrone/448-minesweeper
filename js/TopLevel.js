@@ -80,14 +80,15 @@ function CreateBoard(NumRows, NumCols, NumBombs)
       for (let x = 0; x < NumCols; x++)
       {
         console.log(x, y)
-        if (cheatBoard[y][x].bombnearby > 0)
-        {
-          cheatBoard[y][x].key = cheatBoard[y][x].bombnearby;
-        }
-        else if (cheatBoard[y][x].bomb)
+        if (cheatBoard[y][x].bomb)
         {
           cheatBoard[y][x].key = -3;
         }
+        else if (cheatBoard[y][x].bombnearby > 0)
+        {
+          cheatBoard[y][x].key = cheatBoard[y][x].bombnearby;
+        }
+        
       }
     }
     place_grid_cheat(cheatBoard);
