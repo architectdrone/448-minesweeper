@@ -127,6 +127,7 @@ function place_grid(array2D) {
  */
 function place_grid_cheat(array2D) {
     let html_table = style_table(build_html_table_cheat(array2D));
+    console.log(html_table);
     let div = document.getElementById('cheatBoard');
     div.appendChild(html_table);
 }
@@ -138,7 +139,7 @@ function place_grid_cheat(array2D) {
  */
 function build_html_table_cheat(grid){
     let html_table = document.createElement('table');
-    html_table.setAttribute('id', 'game_board');
+    html_table.setAttribute('id', 'cheatBoardTable');
     for (let i = 0; i < grid.length; i++) {
         let row = document.createElement('tr');
         html_table.appendChild(row);
