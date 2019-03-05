@@ -70,7 +70,27 @@ function CreateBoard(NumRows, NumCols, NumBombs)
       let BombInput = document.getElementById("uB");
       NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
     }
-    place_grid(setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs)));
+    let theBoard = setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs))
+    place_grid(theBoard);
+    
+    let cheatBoard = JSON.parse(JSON.stringify(theBoard));
+    console.log(cheatBoard);
+    for (let y = 0; y < NumRows; y++)
+    {
+      for (let x = 0; x < NumCols; x++)
+      {
+        console.log(x, y)
+        if (cheatBoard[y][x].bombnearby > 0)
+        {
+          cheatBoard[y][x].key = cheatBoard[y][x].bombnearby;
+        }
+        else if (cheatBoard[y][x].bomb)
+        {
+          cheatBoard[y][x].key = -3;
+        }
+      }
+    }
+    place_grid_cheat(cheatBoard);
   }
 }
 
