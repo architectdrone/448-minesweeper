@@ -71,6 +71,7 @@ function CreateBoard(NumRows, NumCols, NumBombs)
       NumBombs = (BombInput.value == "") ? BombInput.placeholder : BombInput.value;
     }
     place_grid(setup(parseInt(NumRows), parseInt(NumCols), parseInt(NumBombs)));
+    place_grid_cheat(Array2DCreator(parseInt(NumRows), parseInt(NumCols)));
   }
 }
 

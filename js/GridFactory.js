@@ -128,9 +128,14 @@ function place_grid(array2D) {
 function place_grid_cheat(array2D) {
     let html_table = style_table(build_html_table_cheat(array2D));
     let div = document.getElementById('cheatBoard');
+    let old_table = document.getElementById('game_board_cheat');
+    if (old_table !== null) {
+        div.removeChild(old_table);
+    }
     div.appendChild(html_table);
 }
-
+//createboard -> place_grid -> setup -> Array2DCreator -><-returns
+//place_grid -> Array2DCreator
 /**
  * Builds HTML Table populates with HTML Images according to Square.key. For cheat mode
  * @param {Array} grid - 2D Array containing Square objects
@@ -138,14 +143,19 @@ function place_grid_cheat(array2D) {
  */
 function build_html_table_cheat(grid){
     let html_table = document.createElement('table');
-    html_table.setAttribute('id', 'game_board');
+    html_table.setAttribute('id', 'game_board_cheat');
     for (let i = 0; i < grid.length; i++) {
         let row = document.createElement('tr');
         html_table.appendChild(row);
         for (let j = 0; j < grid[i].length; j++) {
             let data = document.createElement('td');
-            let img = get_elem_img(grid[i][j].key);
-            data.appendChild(img);
+            if(grid[i][j].bomb === true){
+              let img = get_elem_img(-3);
+              data.appendChild(img);
+            } else{
+              let img = get_elem_img(grid[i][j].key);
+              data.appendChild(img);
+            }
             row.appendChild(data);
         }
     }
