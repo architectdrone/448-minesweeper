@@ -20,6 +20,7 @@ Sound effects from freesound.org:
     "pop.flac": https://freesound.org/people/greenvwbeetle/sounds/244655/
     "laser.wav": https://freesound.org/people/marcuslee/sounds/42106/
     "trumpet.mp3": https://freesound.org/people/joepayne/sounds/413204/
+    "explosion.wav": https://freesound.org/people/tommccann/sounds/235968/
 
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
 

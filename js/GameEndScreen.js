@@ -26,6 +26,8 @@ function Win()
  */
 function Lose()
 {
+  let explosion = new Audio('../explosion.wav');
+  explosion.play();
   for (let i = 0; i < grid.length; i++){
     for (let j = 0; j < grid[i].length; j++){
       if (grid[i][j].bomb === true){
