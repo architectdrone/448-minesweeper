@@ -5,6 +5,8 @@
  */
 function Win()
 {
+  let trumpet = new Audio('../trumpet.mp3');
+  trumpet.play();
   let WinPopup = document.getElementById("WinScreen");
   WinPopup.style.display = "block";
   let form = document.getElementById("msform");
