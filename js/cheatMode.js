@@ -2,6 +2,8 @@ let cheatMode = false; //Whether or not we are currently in cheat mode.
 
 function onCheatModeButton()
 {
+    let laser = new Audio('../laser.wav');
+    laser.play();
     if (!cheatMode)
     {
         enableCheatMode();
