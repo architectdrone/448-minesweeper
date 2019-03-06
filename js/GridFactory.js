@@ -61,6 +61,8 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
+                let shovel = new Audio('../shovel.wav');
+                shovel.play();
                 grid[i][j].recReveal();
                 place_grid(grid);
                 if (checkWinCondition(grid)) {
