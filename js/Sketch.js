@@ -159,6 +159,10 @@ class Square
    * @return - nothing
    */
   flag(){
+    let pop = new Audio('../pop.flac');
+    console.log("Now playing pop...");
+    pop.play();
+    console.log("Done playing pop...");
     if (this.revealed === false && this.key !== 9 && NumFlags > 0) {
       this.oldKey = this.key;
       this.key = 9;
@@ -279,6 +283,7 @@ function IsWithinBoard(PosX, PosY)
  */
 function RevealTile(PosX, PosY)
 {
+  
   if(!grid[PosX][PosY].revealed)
   {
     grid[PosX][PosY].recReveal();
