@@ -129,6 +129,10 @@ function place_grid_cheat(array2D) {
     let html_table = style_table(build_html_table_cheat(array2D));
     console.log(html_table);
     let div = document.getElementById('cheatBoard');
+    let old_table = document.getElementById('cheatBoardTable');
+    if (old_table !== null) {
+        div.removeChild(old_table);
+    }
     div.appendChild(html_table);
 }
 
