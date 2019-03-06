@@ -1,5 +1,7 @@
 let cheatMode = false; //Whether or not we are currently in cheat mode.
-
+/**
+ * plays sounds laser.wav and toggles the board on and off.
+ */
 function onCheatModeButton()
 {
     let laser = new Audio('../laser.wav');
@@ -15,7 +17,9 @@ function onCheatModeButton()
         cheatMode = false;
     }
 }
-
+/**
+ * Toggles board ON by changing CSS display property.
+ */
 function enableCheatMode()
 {
     // let cheatMode = document.getElementById("cheatBoard");
@@ -24,7 +28,9 @@ function enableCheatMode()
     document.getElementById("msBoard").style.display = "none";
     document.getElementById("titleTag").innerHTML = "Cheat Mode Engaged";
 }
-
+/**
+ * Toggles board OFF by changing CSS display property.
+ */
 function disableCheatMode()
 {
     // let cheatMode = document.getElementById("cheatBoard");
