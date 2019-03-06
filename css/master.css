@@ -9,6 +9,8 @@ body /*General formatting */
   /*overflow-y: hidden;*/
 }
 
+
+
 .inputForGame /*Formatting for the input boxes*/
 {
   display:table
@@ -48,6 +50,14 @@ body /*General formatting */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08226b', endColorstr='#8ca5c3',GradientType=1 );
 
   background-color:black;
+}
+
+#msBoard{
+  margin-bottom: 30px;
+}
+
+#cheatBoard{
+  margin-bottom: 30px;
 }
 
 #CreateButton /*Design and formatting for the OK button*/
