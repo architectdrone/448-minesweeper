@@ -16,6 +16,9 @@ All images sourced from 'openclipart' at https://openclipart.org/:
     number-8.png: https://openclipart.org/detail/203544/glossy-number-eight
     flag.png: https://openclipart.org/detail/255282/racing-flag-red
 
+Sound effects from freesound.org:
+    "pop.flac": https://freesound.org/people/greenvwbeetle/sounds/244655/
+    
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
 
 How to run:
