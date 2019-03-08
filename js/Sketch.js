@@ -103,10 +103,13 @@ class Square
       if(this.bomb === false)
       {
         this.revealed = true;
+        current_money++; //Add to money
+        handleFreeFlag(); //Check to see if we are eligible for a free flag
 
         //If the tile clicked is blank then recurse.
         if(this.bombnearby === 0)
         {
+          
           //Set the image to the blank image.
           this.key = 0;
 
@@ -126,6 +129,7 @@ class Square
           this.revealed = true;
           this.key = this.bombnearby;
         }
+        
       }
       else
       {

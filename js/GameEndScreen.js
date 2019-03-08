@@ -17,6 +17,7 @@ function Win()
       grid[i][j].revealed = true;
     }
   }
+  resetFlags(); //Reset all free flags
 }
 
 /**
@@ -47,4 +48,5 @@ function Lose()
   LosePopup.style.display = "block";
   let form = document.getElementById("msform");
   form.style.display = "none";
+  resetFlags(); //Reset all free flags
 }

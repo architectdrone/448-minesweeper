@@ -57,3 +57,10 @@ function handleFreeFlag()
     }
     document.getElementById("FFStore").innerHTML = "To next flag: "+current_money+"/"+getNextCost();
 }
+
+function resetFlags()
+{
+    number_of_free_flags = 0;
+    current_money = 0;
+    document.getElementById("FFStore").innerHTML = "";
+}
