@@ -139,7 +139,7 @@ function place_grid_cheat(array2D) {
 }
 
 /**
- * Builds HTML Table populates with HTML Images according to Square.key. For cheat mode
+ * Builds HTML Table populates with HTML Images according to Square.key. For cheat mode.
  * @param {Array} grid - 2D Array containing Square objects
  * @returns {HTMLElement} HTML Table with images corresponding with Square.key
  */
