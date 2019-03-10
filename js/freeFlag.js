@@ -50,12 +50,14 @@ function handleFreeFlag()
     */
     if (freeFlagAvailable())
     {
+        let r = new Audio('../register.wav');
+        r.play();
         placeFreeFlag();
         checkWinCondition(grid);
         current_money-=getNextCost();
         number_of_free_flags++;
     }
-    document.getElementById("FFStore").innerHTML = "To next flag: "+current_money+"/"+getNextCost();
+    document.getElementById("FFStore").innerHTML = "Get free flags by clearing spaces! <br> To next free flag: "+current_money+"/"+getNextCost();
 }
 
 function resetFlags()

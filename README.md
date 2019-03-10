@@ -22,6 +22,7 @@ Sound effects from freesound.org:
     "trumpet.mp3": https://freesound.org/people/joepayne/sounds/413204/
     "explosion.wav": https://freesound.org/people/tommccann/sounds/235968/
     "shovel.wav": https://freesound.org/people/snardin42/sounds/73200/
+    "register.wav": https://freesound.org/people/creek23/sounds/75235/
 
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
 
