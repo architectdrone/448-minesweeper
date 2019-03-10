@@ -16,6 +16,6 @@ function updateFlagVsMineDisplay()
     }
     else
     {
-        theDiv.innerHTML = "<b>"+message+"</b>"
+        theDiv.innerHTML = "<b>"+message+"</b>";
     }
 }
