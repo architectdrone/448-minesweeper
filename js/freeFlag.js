@@ -36,6 +36,7 @@ function placeFreeFlag()
             if (grid[x][y].bomb && grid[x][y].key != 9)
             {
                 grid[x][y].flag();
+                updateFlagVsMineDisplay();
                 place_grid(grid);
                 return;
             }

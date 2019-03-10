@@ -92,6 +92,8 @@ function CreateBoard(NumRows, NumCols, NumBombs)
       }
     }
     place_grid_cheat(cheatBoard);
+    numberOfFlagsOnBoard = 0;
+    numberOfMinesOnBoard = NumBombs;
   }
 }
 
@@ -109,4 +111,5 @@ function Load()
   });
 
   CreateBoard(15, 15, 15);
+
 }

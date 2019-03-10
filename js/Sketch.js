@@ -164,17 +164,17 @@ class Square
    */
   flag(){
     let pop = new Audio('../pop.flac');
-    console.log("Now playing pop...");
     pop.play();
-    console.log("Done playing pop...");
     if (this.revealed === false && this.key !== 9 && NumFlags > 0) {
       this.oldKey = this.key;
       this.key = 9;
       NumFlags--;
+      numberOfFlagsOnBoard++;
     }
     else if (this.revealed === false && this.key === 9){
       this.key = this.oldKey;
       NumFlags++;
+      numberOfFlagsOnBoard--;
     }
   }
 

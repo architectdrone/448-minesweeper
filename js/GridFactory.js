@@ -71,6 +71,7 @@ function build_html_table(grid){
             });
             data.addEventListener('contextmenu',  function (){
                 grid[i][j].flag();
+                updateFlagVsMineDisplay();
                 place_grid(grid);
                 if (checkWinCondition(grid)) {
                     Win();
