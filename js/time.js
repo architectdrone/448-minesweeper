@@ -4,8 +4,8 @@ let c = 0; //numerical time value
 let t; //sets time delay for count
 let timer_on = false;
 
-/*
-Increments time by seconds
+/**
+* Increments time by seconds
 */
 function timedCount() {
   document.getElementById("Timer").innerHTML = c;
@@ -13,8 +13,8 @@ function timedCount() {
   t = setTimeout(timedCount, 1000);
 }
 
-/*
-Starts timedCount()
+/**
+* Starts timedCount()
 */
 function startCount() {
   if (timer_on == false) {
@@ -23,16 +23,16 @@ function startCount() {
   }
 }
 
-/*
-Stops timer
+/**
+* Stops timer
 */
 function stopCount() {
   clearTimeout(t);
   timer_on = false;
 }
 
-/*
-resets timer to 0
+/**
+* resets timer to 0
 */
 function resetCount() {
   c = 0;
