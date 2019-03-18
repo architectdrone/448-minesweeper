@@ -61,6 +61,9 @@ function build_html_table(grid){
             data.appendChild(img);
 
             data.addEventListener('click',  function (){
+                if (grid[i][j].key === -1) {
+                    incrementClickCount();
+                }
                 let shovel = new Audio('../shovel.wav');
                 shovel.play();
                 grid[i][j].recReveal();

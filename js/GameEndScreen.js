@@ -5,6 +5,7 @@
  */
 function Win()
 {
+  clickCountToZero();
   let trumpet = new Audio('../trumpet.mp3');
   trumpet.play();
   let WinPopup = document.getElementById("WinScreen");
@@ -29,6 +30,7 @@ function Win()
  */
 function Lose()
 {
+  clickCountToZero();
   let explosion = new Audio('../explosion.wav');
   explosion.play();
   for (let i = 0; i < grid.length; i++){
