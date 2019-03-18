@@ -24,6 +24,9 @@ Sound effects from freesound.org:
     "shovel.wav": https://freesound.org/people/snardin42/sounds/73200/
     "register.wav": https://freesound.org/people/creek23/sounds/75235/
 
+Reference for time.js:
+    https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout_cleartimeout2
+    
 Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
 
 How to run:
