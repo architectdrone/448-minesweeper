@@ -19,5 +19,9 @@ function startCount() {
 function stopCount() {
   clearTimeout(t);
   timer_on = false;
+}
+
+function reset() {
   c = 0;
+  document.getElementById("Timer").innerHTML = 0;
 }
