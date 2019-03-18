@@ -19,6 +19,7 @@ function Win()
   }
   resetFlags(); //Reset all free flags
   document.getElementById("FlagVsMine").innerHTML = "";
+  stopCount();
 }
 
 /**
@@ -51,4 +52,5 @@ function Lose()
   form.style.display = "none";
   resetFlags(); //Reset all free flags
   document.getElementById("FlagVsMine").innerHTML = "";
+  stopCount();
 }
