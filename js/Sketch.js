@@ -98,6 +98,7 @@ class Square
 
 
   recReveal(){
+    startCount();
     if(this.key !== 9 && this.revealed === false)
     {
       if(this.bomb === false)
@@ -163,6 +164,7 @@ class Square
    * @return - nothing
    */
   flag(){
+    startCount();
     let pop = new Audio('../pop.flac');
     pop.play();
     if (this.revealed === false && this.key !== 9 && NumFlags > 0) {
