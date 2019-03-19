@@ -1,6 +1,8 @@
 # 448-minesweeper
 EECS 448 Group Project #1 - Miller Bath, Adam Wallace, Alex Wittman, Allen Lu, Teddy Kahwaji
+
 Continued by Owen Mellema, Zach Fruend, Zach Davis, Gwen Liu, Guanyu Li
+
 Started on 2/7/19
 
 All images sourced from 'openclipart' at https://openclipart.org/:
