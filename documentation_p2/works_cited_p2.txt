@@ -1,0 +1,19 @@
+All images sourced from 'openclipart' at https://openclipart.org/:
+
+bomb.png: https://openclipart.org/detail/191907/bomb
+square.png: https://openclipart.org/detail/79453/beveled-square
+number-1.png: https://openclipart.org/detail/203532/glossy-number-one
+number-2.png: https://openclipart.org/detail/203533/glossy-number-two
+number-3.png: https://openclipart.org/detail/203534/glossy-number-three
+number-4.png: https://openclipart.org/detail/203535/glossy-number-four
+number-5.png: https://openclipart.org/detail/203536/glossy-number-five
+number-6.png: https://openclipart.org/detail/203537/glossy-number-six
+number-7.png: https://openclipart.org/detail/203543/glossy-number-seven
+number-8.png: https://openclipart.org/detail/203544/glossy-number-eight
+flag.png: https://openclipart.org/detail/255282/racing-flag-red
+
+Sound effects from freesound.org: "pop.flac": https://freesound.org/people/greenvwbeetle/sounds/244655/ "laser.wav": https://freesound.org/people/marcuslee/sounds/42106/ "trumpet.mp3": https://freesound.org/people/joepayne/sounds/413204/ "explosion.wav": https://freesound.org/people/tommccann/sounds/235968/ "shovel.wav": https://freesound.org/people/snardin42/sounds/73200/ "register.wav": https://freesound.org/people/creek23/sounds/75235/
+
+Reference for time.js: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout_cleartimeout2
+
+Gradient code for title bar from: http://www.colorzilla.com/gradient-editor/
